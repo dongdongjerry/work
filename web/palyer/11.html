@@ -1,0 +1,189 @@
+<!doctype html>
+<html style="font-size:50px">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Copyright" content="Tencent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="robots" content="none" />
+<script>
+	(function (win,doc){
+		if (!win.addEventListener) return;
+		var html=document.documentElement;
+		function setFont(cb) {
+			var w = html.clientWidth,
+				h = html.clientHeight;
+			html.style.fontSize= w > h ? w/1334*100+"px" : w/750*100+"px";
+			if(cb&&typeof (cb)=="function"){cb()}
+		}
+		setFont();
+		doc.addEventListener('DOMContentLoaded',setFont,false);
+		win.addEventListener('resize',setFont,false);
+		win.addEventListener('load',setFont,false);
+	})(window,document);
+	if (/iP(hone|od|ad)/.test(navigator.userAgent)) {
+		var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/),
+			version = parseInt(v[1], 10);
+		if(version >= 8){
+			document.documentElement.classList.add('hairlines')
+		}
+	}
+</script>
+<meta name="format-detection" content="telephone=no">
+<!-- 设计：xiaori | 重构：nor |  团队博客：http://tgideas.qq.com/ -->
+<link rel="stylesheet" href="http://zqnba.qq.com/ingame/all/web201708/assets/css/ui.css" />
+<link rel="stylesheet" href="http://zqnba.qq.com/ingame/all/web201708/assets/css/main.css" />
+<title>最强NBA微社区</title>
+
+<style>
+[v-cloak] {
+	display: none;
+}
+body{height: 100%;}
+.dataBank{padding-left: .20rem; margin-left: 1.00rem; height: 100%;}
+.db_title{margin: .20rem 0rem;}
+.db_title strong{color: #FFFFFF; display: block; padding-left: .10rem; border-left: .08rem solid #CB5B2B;font-size: .26rem;}
+img{display: block; width: 100%; max-width: 100%;}
+
+.dab_banner_li{width: 4.65rem; height: 1.27rem; overflow: hidden; margin-bottom: .20rem; border-radius: .05rem;}
+.dataBank_body{ height: 100%;position: relative;}
+.dataBank_body_left{width: 4.80rem;box-sizing: border-box; position: fixed; left: 1.17rem; top: 0;-webkit-overflow-scrolling: touch; overflow-scrolling: touch; overflow-y: auto;}
+.dataBank_body_right{width: 7.30rem;box-sizing: border-box;right: 0; top: 0; background: #172232; padding-left: .20rem;padding-right: .20rem;position: absolute;  -webkit-overflow-scrolling: touch; overflow-scrolling: touch; overflow-y: auto;}
+
+.sort_box{overflow: scroll; width: 6.36rem;}
+.sort_list{overflow: hidden; padding-bottom: .20rem;}
+
+.sort_letter{border-radius: .03rem; display: block; height: .60rem; color: #FFFFFF; text-indent: .20rem; line-height: .60rem; font-size:.28rem; background:#212C3C; font-weight: normal;}
+.stars_one_span{width: 1.06rem; height: 1.06rem; overflow: hidden; display: inline-block; border-radius: .05rem;}
+.stars_one{width: 2.04rem; margin-top: .20rem; float: left; margin-right: .28rem;display:block;}
+.stars_one p{color: #FFFFFF; font-size: .20rem; padding-top: .10rem; }
+.sort_list li:nth-child(5n){margin-right: 0rem;}
+.initials{width: .54rem; background: #212C3C; color:#8F949C; font-size: .30rem; position: fixed !important; right: 0; top: 0; bottom: 0;-webkit-overflow-scrolling: touch; overflow-scrolling: touch; overflow-y: auto;}
+.initials li{height: .60rem; line-height: .60rem; text-align: center;}
+.dab_banner_li a{display: block;}
+/*竖屏*/
+@media screen and (orientation: portrait){
+ .dataBank{width: 100%; padding-left: 0; margin-left: 0;}
+ .dab_banner_li{width: 100%; height: auto;}
+ .dataBank_body_left,.dataBank_body_right{position: relative;width: 100%;height: auto;left:0;} 
+ .dataBank_body_left{padding: .20rem;}
+ .initials{top: 80%; /*top: 73%;*/ z-index: 100;height: 100%;}
+}
+#letter{width: 1rem;height: 1rem;border-radius: 5px;font-size: .75rem;color: #ccc;text-align: center;line-height: 1rem;background: rgba(145,145,145,0.6);
+position: fixed;left: 50%;top: 50%;margin: -.5rem 0px 0px 2rem;z-index: 99;display: none;}
+.wrap_lock{height:100%; width:100%; background:#333;display:none;position:fixed;left:0;top:0;z-index:999;}
+.wrap_lock::after {content: "为了更好的视觉体验，请横屏观看~";position:absolute; top:50%; left:0; height:30px; line-height:30px; 
+width:100%;z-index:99999; text-align:center; font-size:18px; color:#fff;  }
+</style>
+</head>
+<body style="font-size: 12px;">
+<div class="menu">
+    <!--#include virtual="/ingame/all/web201708/assets/inc/menu.html" -->
+</div>
+ <div class="dataBank">
+    <div class="dataBank_body">
+        <div class="dataBank_body_left">
+            <div class="db_title"><strong>热门球星</strong></div>
+            <div class="dab_banner">
+                <ul class="dab_banner_ul">
+                    <li class='dab_banner_li'>
+                        <a href="###"><img src="http://placehold.it/466x127/303030"></a>
+                    </li>
+                    <li class='dab_banner_li'>
+                        <a href="###"><img src="http://placehold.it/466x127/303030"></a>
+                    </li>
+                    <li class='dab_banner_li'>
+                        <a href="###"><img src="http://placehold.it/466x127/303030"></a>
+                    </li>
+                    <li class='dab_banner_li'>
+                        <a href="###"><img src="http://placehold.it/466x127/303030"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dataBank_body_right">
+            <div class="db_title"><strong>热门索引</strong></div>
+            <div id="letter"></div>
+			<div class="sort_box">
+				<ul>
+				
+				</ul>
+			</div>			
+        </div>
+        <div class="initials">
+			<ul>
+				<li><img src="http://www.jq22.com/demo/jQuery-szmjs20151201/img/068.png"></li>
+			</ul>
+		</div>
+    </div>
+ </div>
+<div class="wrap_lock"></div>
+<!--共用脚本引入-->
+<script type="text/javascript" src="http://www.jq22.com/demo/jQuery-szmjs20151201/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="http://www.jq22.com/demo/jQuery-szmjs20151201/jquery.charfirst.pinyin.js"></script>
+<script type="text/javascript" src="js/sort.js"></script>
+<script>
+function createPlayer(res){
+	var data=[];
+	var img=[];
+	var _str=[];
+	for(var i in res.team_3f){
+		for(var j in res.team_3f[i].playerarray_30){
+			if(res.team_3f[i].playerarray_30[j].teamman_bc!=undefined){	
+				if(res.team_3f[i].playerarray_30[j].teamman_bc.length>1){					
+					for(var k in res.team_3f[i].playerarray_30[j].teamman_bc){
+						data.push(res.team_3f[i].playerarray_30[j].teamman_bc[k].cname_d0);	
+						img.push(res.team_3f[i].playerarray_30[j].teamman_bc[k].smpic_01);						
+					    _str.push(res.team_3f[i].playerarray_30[j].teamman_bc[k].playerid_3f);
+						//console.log(_str);
+						//console.log(data);
+					}
+				}else{
+					data.push(res.team_3f[i].playerarray_30[j].teamman_bc.cname_d0);
+					img.push(res.team_3f[i].playerarray_30[j].teamman_bc.smpic_01);	
+					_str.push(res.team_3f[i].playerarray_30[j].teamman_bc.playerid_3f)
+					//console.log(_str);
+				}			
+			}
+		}
+	}
+	console.log(data.length);
+	console.log(img.length);
+	var _list='';
+	for(var a in data){	
+		  //alert(data[a]);
+
+		_list += '<li class="sort_list">';
+		_list += '<a class="stars_one" href="page.html?dataid='+_str[a]+'">';
+		_list += '<img src="'+img[a]+'" alt="" class="stars_one_span">';	
+		_list += '<p class="num_name">'+data[a]+'</p>';
+		_list += '</a>';			
+		_list += '</li>';
+		
+	}
+	$('.sort_box ul').html(_list);
+};
+</script>
+<script>
+$(function(){
+	 $(window).scroll(function() {
+        if ($(window).scrollTop() > 100) {
+            $('.initials').css('position','absolute');
+        } else {
+            $('.initials').css('position','fixed');
+        }
+    });
+})
+
+window.addEventListener('orientationchange', function () {
+	if (window.orientation == 90 || window.orientation == -90) {
+		$('.wrap_lock').hide();
+	}
+	if (window.orientation == 180 || window.orientation == 0) {
+		$('.wrap_lock').show();
+	}
+}, false);
+</script>
+<script src="http://game.gtimg.cn/images/zqnba/wtc_static_zqnba/datas/data_zlk_qy.json"></script>
+</body>
+</html>

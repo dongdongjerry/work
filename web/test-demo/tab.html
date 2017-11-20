@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		h2 {
+                border-top: solid cornflowerblue 1px;
+                border-left: solid cornflowerblue 1px;
+                width: 50px;
+                height: 25px;
+                margin: 0;
+                float: left;
+                text-align: center;
+            }
+            
+            .tab-content {
+                border: solid cornflowerblue 1px;
+                width: 152px;
+                height: 100px;
+            }
+            
+            .tab-content div{
+                display: none;
+            }
+            
+            .selected {
+                background-color: cornflowerblue;
+            }
+            
+            .tab-content .show{
+                display: block;
+            }
+	</style>
+</head>
+<body>
+<div class="tab-head">
+            <h2 class="selected">1</h2>
+            <h2>2</h2>
+            <h2>3</h2>
+        </div>
+        <div class="tab-content">
+            <div class="show">content1</div>
+            <div>content2</div>
+            <div>content3</div>
+        </div>
+
+
+
+	<script type="text/javascript">
+		var tabs = document.getElementsByClassName('tab-head')[0].getElementsByTagName('h2'),
+        	contents = document.getElementsByClassName('tab-content')[0].getElementsByTagName('div');
+        console.log(tabs);
+        console.log(contents);
+            (function changeTab() {
+                for(var i = 0, len = tabs.length; i < len; i++) {
+                    tabs[i].onmouseover = showTab;
+                }
+            })();
+
+            function showTab() {
+                for(var i = 0, len = tabs.length; i < len; i++) {
+                    if(tabs[i] === this) {
+                        tabs[i].className = 'selected';
+                        contents[i].className = 'show';
+                    } else {
+                        tabs[i].className = '';
+                        contents[i].className = '';
+                    }
+                }
+            }
+	</script>
+</body>
+</html>

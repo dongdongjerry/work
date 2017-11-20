@@ -1,0 +1,17 @@
+p {
+  width: 200px;
+  color: #f00;
+  border: 1px solid #2e2e2e;
+}
+.content {
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 40px;
+}
+@media screen and (orientation: portrait) {
+  .content {
+    width: 10px;
+  }
+}

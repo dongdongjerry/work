@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="dist/css/swiper.min.css" rel="stylesheet">
+    <script src="dist/js/swiper.min.js"></script>
+    <style>
+        html{
+            font-size: 100px;
+        }
+        body {
+            background: #fff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 4.98rem;
+            height: 7.30rem;
+            padding: 0.5rem;
+        }
+        .swiper-slide {
+            background-position: center;
+            width: 100%;
+            height: auto;
+            background-size: 100% auto;
+            transition-duration: 0ms;
+            z-index: 5;
+            transform: translate3d(-1494px, 0px, 0px) rotateX(0deg) rotateY(-180deg);
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        .swiper-pagination-bullet{
+            display: inline-block;
+            width: 0.32rem;
+            height: 0.31rem;
+            background: url("ossweb-img/btn-juxing.png") center center no-repeat;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background: url("ossweb-img/btn-fangxing-active.png") center center no-repeat;
+            opacity: 1;
+        }
+        .swiper-button-prev {
+            width: 34px;
+            height: 70px;
+            background-image: url("ossweb-img/btn-left.png");
+            left: 10px;
+            right: auto;
+        }
+        .swiper-button-next{
+            width: 34px;
+            height: 70px;
+            background-image: url("ossweb-img/btn-left.png");
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url('ossweb-img/img-carousel.png')"></div>
+        <div class="swiper-slide" style="background-image:url('ossweb-img/img-carousel.png')"></div>
+        <div class="swiper-slide" style="background-image:url('ossweb-img/img-carousel.png')"></div>
+        <div class="swiper-slide" style="background-image:url('ossweb-img/img-carousel.png')"></div>
+        <div class="swiper-slide" style="background-image:url('ossweb-img/img-carousel.png')"></div>
+        <div class="swiper-slide" style="background-image:url('ossweb-img/img-carousel.png')"></div>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Add Arrows -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<!-- Swiper JS -->
+
+<!-- Initialize Swiper -->
+<script>
+    var mql = window.matchMedia("(orientation: portrait)");
+    function onMatchMeidaChange(mql){
+        var html = document.documentElement;
+        var k = 640;
+        if(mql.matches) {
+            html.style.fontSize = html.clientWidth / k * 100 + "px";
+        }else {
+            k = 1136;
+            html.style.fontSize = html.clientWidth / k * 100 + "px";
+        }
+    }
+    onMatchMeidaChange(mql);
+    mql.addListener(onMatchMeidaChange);
+
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'flip',
+        grabCursor: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        paginationBulletRender: function (swiper, index, className) {
+            return '<span class="' + className + '">' + '</span>';
+        }
+    });
+</script>
+</body>
+</html>

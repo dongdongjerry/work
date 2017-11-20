@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="all">
+    <meta name="author" content="Tencent-CP">
+    <meta name="Copyright" content="Tencent">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="Description"
+          content="《剑侠情缘手游》官方网站，《剑侠情缘手游》是剑侠情缘系列首款手游，由原班人马打造，游戏还原了端游中经典的门派以及宋金战场、白虎堂等经典玩法。同时手游版还将开放家族系统、结婚等社交系统，给予玩家一个更丰富，“有人味”的江湖。在还原经典的基础上，手游版将会打造一个更为开放的大世界，让告别房间式RPG体验，让玩家随时随地闯荡江湖。">
+    <meta name="Keywords" content="剑侠情缘手游,剑侠手游,剑侠情缘移动版,剑侠移动版,剑侠情缘手机版,剑侠手机版,剑侠情缘,剑网手游,剑侠情缘网络版，武侠手游">
+    <title>代言人 - 剑侠情缘官方网站 - 腾讯游戏</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <!-- 页面设计：cp | 页面制作：cp | 创建：2017-05-25 -->
+    <style>
+        .top-log{
+            display: block;
+            width: 23%;
+            position: absolute;
+            top: 3%;
+            left: 3%;
+        }
+        .top-log img,.top-return img{
+            width: 100%;
+            height:auto;
+        }
+        .top-return{
+            display: block;
+            width: 23%;
+            position: absolute;
+            top: 3%;
+            right: 3%;
+        }
+        .top-video{
+            display: block;
+            width: 70%;
+            position: absolute;
+            left:50%;
+            bottom:8%;
+            transform:translateX(-50%);
+            -ms-transform:translateX(-50%);    /* IE 9 */
+            -moz-transform:translateX(-50%);   /* Firefox */
+            -webkit-transform:translateX(-50%); /* Safari 和 Chrome */
+            -o-transform:translateX(-50%);     /* Opera */
+        }
+        .top-video .top-btn{
+            display: block;
+            width: 20%;
+            height:auto;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            -ms-transform:translate(-50%,-50%);    /* IE 9 */
+            -moz-transform:translate(-50%,-50%);   /* Firefox */
+            -webkit-transform:translate(-50%,-50%); /* Safari 和 Chrome */
+            -o-transform:translate(-50%,-50%);     /* Opera */
+        }
+        .top-video .top-img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .top-tips{
+            display: block;
+            width: 10%;
+            position: absolute;
+            left:50%;
+            bottom:2%;
+            transform:translateX(-50%);
+            -ms-transform:translateX(-50%);    /* IE 9 */
+            -moz-transform:translateX(-50%);   /* Firefox */
+            -webkit-transform:translateX(-50%); /* Safari 和 Chrome */
+            -o-transform:translateX(-50%);     /* Opera */
+        }
+        .top-tips img{
+            width: 100%;
+            height:auto;
+        }
+        .nav{
+            font-size:0.24rem;
+            color: #ffffff;
+            text-align: center;
+            background: url("ossweb-img/bg_s_04.jpg") center center no-repeat;
+            background-size: 100% 100%;
+            padding: 4% 0;
+        }
+        .nav li{
+            display: inline-block;
+            background: url("ossweb-img/nav-list.png") center center no-repeat;
+            background-size: 100% 100%;
+            padding: 2% 7%;
+        }
+        .nav li:nth-child(2){
+            margin:0 2%;
+        }
+        .nav li.active{
+            background: url("ossweb-img/nav-list-on.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .nav-content{
+            display: none;
+        }
+        .nav-content.active{
+            display: block;
+        }
+
+        .order{
+            width: 100%;
+            position: absolute;
+            bottom:18%;
+            text-align: center;
+            font-size:0.26rem;
+        }
+        .order p{
+            color:#4d546b;
+            margin-bottom:2%;
+        }
+        .order p span{
+            color:#ff708b;
+        }
+        .order a{
+            display: inline-block;
+            font-size: 0.16rem;
+            color: #ffffff;
+            background: url(ossweb-img/btn-detail.png) center center no-repeat;
+            background-size: 100% 100%;
+            padding: 2% 7%;
+        }
+        .nav-content:nth-child(4),.nav-content:nth-child(5){
+            font-size:0.12rem;
+            background: url("ossweb-img/bg_s_08.jpg") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .slide01{
+            padding-bottom:8%;
+        }
+        .slide01 .swiper-container{
+            width: 75%;
+            margin: 0 auto;
+        }
+        .slide01 img{
+            display: block;
+            width: 100%;
+            height:auto;
+        }
+        .nav-content:nth-child(4) .swiper-button-prev{
+            width: 5%;
+            height: 20%;
+            background: url("ossweb-img/arrow-left.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .nav-content:nth-child(4) .swiper-button-next{
+            width: 5%;
+            height: 20%;
+            background: url("ossweb-img/arrow-right.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .nav-content:nth-child(4) .swiper-pagination{
+            padding:2% 0;
+            width: 100%;
+            text-align: center;
+        }
+        .nav-content:nth-child(4) .swiper-pagination-bullet{
+            margin: 0 0.05rem;
+            width: 0.3rem;
+            height: 0.3rem;
+            display: inline-block;
+            border-radius: 0;
+            background: url("ossweb-img/slide-page.png") center center no-repeat;
+            background-size: 100% 100%;
+            opacity:1;
+        }
+        .nav-content:nth-child(4) .swiper-pagination-bullet-active{
+            background: url(ossweb-img/slide-page-on.png) center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .nav-content:nth-child(5) .list-video{
+            box-sizing:border-box;
+            -moz-box-sizing:border-box; /* Firefox */
+            -webkit-box-sizing:border-box; /* Safari */
+            padding: 0 1%;
+            overflow: hidden;
+        }
+        .nav-content:nth-child(5) .list-video li{
+            position: relative;
+            box-sizing:border-box;
+            -moz-box-sizing:border-box; /* Firefox */
+            -webkit-box-sizing:border-box; /* Safari */
+            width:50%;
+            float:left;
+            padding: 0 1%;
+            margin-bottom:2%;
+        }
+        .nav-content:nth-child(5) .list-video p{
+            position: absolute;
+            bottom:0;
+            padding: 2% 0;
+            width: 96%;
+            background: rgba(0,0,0,0.5);
+            text-indent: 1em;
+            text-align: left;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        .nav-content:nth-child(5) .list-video a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #ffffff;
+        }
+        .nav-content:nth-child(5) .list-video .video-img-list{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .nav-content:nth-child(5) .list-video .video-btn-list{
+            display: block;
+            width: 18%;
+            height:auto;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            -ms-transform:translate(-50%,-50%);    /* IE 9 */
+            -moz-transform:translate(-50%,-50%);   /* Firefox */
+            -webkit-transform:translate(-50%,-50%); /* Safari 和 Chrome */
+            -o-transform:translate(-50%,-50%);     /* Opera */
+        }
+        .slide02 img{
+            display: block;
+            width: 100%;
+            height:auto;
+        }
+        /*竖屏轮播*/
+        .slide02 .portrait.swiper-container{
+            width: 75%;
+            margin: 2% auto;
+        }
+        .nav-content:nth-child(5) .portrait.swiper-button-prev,.nav-content:nth-child(5) .portrait.swiper-button-next{
+            top:75%;
+        }
+        .nav-content:nth-child(5) .portrait.swiper-button-prev{
+            width: 5%;
+            height: 10%;
+            background: url("ossweb-img/arrow-left.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .nav-content:nth-child(5) .portrait.swiper-button-next{
+            width: 5%;
+            height: 10%;
+            background: url("ossweb-img/arrow-right.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        /*横屏轮播*/
+
+        .slide02 .landscape.swiper-container{
+            width: 40%;
+            height:1.6rem;
+            float: right;
+            margin-top:5%;
+        }
+        .slide02 .landscape.swiper-container img{
+            width: 100%;
+            height:100%;
+        }
+        .nav-content:nth-child(5) .landscape.swiper-button-prev,.nav-content:nth-child(5) .landscape.swiper-button-next{
+            right:18%;
+            left:auto;
+            width: 6%;
+            height: 8%;
+        }
+        .nav-content:nth-child(5) .landscape.swiper-button-prev{
+            top:7%;
+            background: url("ossweb-img/arrow-up.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .nav-content:nth-child(5) .landscape.swiper-button-next{
+            top:78%;
+            background: url("ossweb-img/arrow-down.png") center center no-repeat;
+            background-size: 100% 100%;
+        }
+        .nav-content:nth-child(5) .more{
+            width: 75%;
+            display: block;
+            text-align: center;
+            margin: 2% auto;
+            padding: 1.5% 0;
+            color: #4781c4;
+            font-size:0.18rem;
+            background: url("ossweb-img/more-bg.jpg") center center no-repeat;
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+        .nav-content:nth-child(5) .more span{
+            display: inline-block;
+            float: left;
+            width: 7%;
+            height:0.3rem;
+            position: relative;
+            left:20%;
+            background: url(ossweb-img/more-icon.png) 50% 50% no-repeat;
+            background-size: 100% 100%;
+        }
+        /*视频*/
+        #video-box{
+            display: none;
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height:100%;
+        }
+        /*竖屏*/
+        @media all and (orientation : portrait){
+            .landscape{
+                display: none;
+            }
+        }
+        /*横屏*/
+        @media all and (orientation : landscape){
+            .portrait{
+                display: none;
+            }
+            .top-log{
+                width: 15%;
+                left:50%;
+                top:3%;
+                transform:translateX(-50%);
+                -ms-transform:translateX(-50%);    /* IE 9 */
+                -moz-transform:translateX(-50%);   /* Firefox */
+                -webkit-transform:translateX(-50%); /* Safari 和 Chrome */
+                -o-transform:translateX(-50%);     /* Opera */
+            }
+            .top-return{
+                width: 15%;
+            }
+            .top-video{
+                width: 38%;
+                bottom:10%;
+            }
+            .top-tips{
+                width: 5%;
+                bottom:1%;
+            }
+            .nav{
+                background: url("ossweb-img/bg_03.jpg") center center no-repeat;
+                background-size: 100% 100%;
+            }
+            .nav li{
+                padding: 1.5% 5%;
+                font-size: 0.18rem;
+            }
+            .order{
+                font-size:0.2rem;
+                bottom:33%;
+            }
+            .order p{
+                margin-bottom:1%;
+            }
+            .order a{
+                font-size:0.12rem;
+                padding: 1% 5%;
+            }
+            .nav-content:nth-child(4),.nav-content:nth-child(5){
+                background: url("ossweb-img/bg_06.jpg") center center no-repeat;
+                background-size: 100% 100%;
+            }
+            .nav-content:nth-child(4) .swiper-pagination-bullet{
+                width: 0.2rem;
+                height: 0.2rem;
+            }
+            .nav-content:nth-child(5) .list-video{
+                width: 60%;
+                float: left;
+            }
+            .slide02{
+                text-align: center;
+            }
+            .nav-content:nth-child(5){
+                padding-right:1%;
+                box-sizing:border-box;
+                -moz-box-sizing:border-box; /* Firefox */
+                -webkit-box-sizing:border-box; /* Safari */
+            }
+            .nav-content:nth-child(5) .more{
+                display: inline-block;
+                width: auto;
+                padding-left: 7%;
+                padding-right: 3%;
+                font-size: .16rem;
+                background: url(ossweb-img/more-icon.png) 8% 50% no-repeat;
+                background-size: 10% auto;
+                border: 1px solid #a9bcd0;
+            }
+            .nav-content:nth-child(5) .more span{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<section class="top">
+    <img class="landscape" src="ossweb-img/bg_01.jpg" alt="背景">
+    <img class="landscape" src="ossweb-img/bg_02.jpg" alt="背景">
+    <img class="portrait" src="ossweb-img/bg_s_01.jpg" alt="背景">
+    <img class="portrait" src="ossweb-img/bg_s_02.jpg" alt="背景">
+    <img class="portrait" src="ossweb-img/bg_s_03.jpg" alt="背景">
+    <a class="top-log" href="http://jxqy.qq.com/ingame/all/index.shtml" onclick="PTTSendClick('btn','index','返回官网');">
+        <img src="ossweb-img/logo.png" alt="logo">
+    </a>
+    <a class="top-return" href="http://jxqy.qq.com/ingame/all/index.shtml" onclick="PTTSendClick('btn','index','返回官网');">
+        <img src="ossweb-img/return.png" alt="logo">
+    </a>
+    <a class="top-video" href="javascript:void (0)">
+        <img class="top-btn" src="ossweb-img/video-btn-top.png" alt="视频按钮" onclick="PTTSendClick('btn','video','播放');">
+        <img class="top-img" src="ossweb-img/video-img-top.jpg" alt="视频">
+        <div id="video-box"></div>
+    </a>
+    <a class="top-tips">
+        <img src="ossweb-img/next-tips.png" alt="箭头下">
+    </a>
+</section>
+<ul class="nav">
+    <li class="active" onclick="PTTSendClick('btn','nav','导航');">八大福利</li>
+    <li onclick="PTTSendClick('btn','nav','导航');">最新玩法</li>
+    <li onclick="PTTSendClick('btn','nav','导航');">趣味花絮</li>
+</ul>
+<section class="nav-content active">
+    <img class="landscape" src="ossweb-img/bg_04.jpg" alt="背景">
+    <img class="landscape" src="ossweb-img/bg_05.jpg" alt="背景">
+    <img class="portrait" src="ossweb-img/bg_s_05.jpg" alt="背景">
+    <img class="portrait" src="ossweb-img/bg_s_06.jpg" alt="背景">
+    <img class="portrait" src="ossweb-img/bg_s_07.jpg" alt="背景">
+    <div class="order">
+        <p>庆典限时&nbsp;新品现世&nbsp;<span>四折</span>礼包</p>
+        <a href="javascript:alert('悬念即将揭晓！')" onclick="PTTSendClick('btn','detail','详情');">查看详情</a>
+    </div>
+</section>
+<section class="nav-content slide01">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="ossweb-img/slide-img01.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img02.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img03.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img04.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img05.jpg" alt="轮播图"></div>
+        </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swip er-pagination"></div>
+</section>
+<section class="nav-content slide02">
+    <ul class="list-video" onclick="alert('敬请期待！');">
+        <li>
+            <a href="javascript:void (0)">
+                <img class="video-btn-list" src="ossweb-img/video-btn-list.png" alt="播放按钮">
+                <img class="video-img-list" src="ossweb-img/video-img-list01.png" alt="视频">
+                <p>剑侠情缘精彩花絮视频</p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void (0)">
+                <img class="video-btn-list" src="ossweb-img/video-btn-list.png" alt="播放按钮">
+                <img class="video-img-list" src="ossweb-img/video-img-list02.jpg" alt="视频">
+                <p>剑侠情缘精彩花絮视频</p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void (0)">
+                <img class="video-btn-list" src="ossweb-img/video-btn-list.png" alt="播放按钮">
+                <img class="video-img-list" src="ossweb-img/video-img-list03.jpg" alt="视频">
+                <p>剑侠情缘精彩花絮视频</p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void (0)">
+                <img class="video-btn-list" src="ossweb-img/video-btn-list.png" alt="播放按钮">
+                <img class="video-img-list" src="ossweb-img/video-img-list04.jpg" alt="视频">
+                <p>剑侠情缘精彩花絮视频</p>
+            </a>
+        </li>
+    </ul>
+    <div class="swiper-container portrait">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list01.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list06.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list03.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list04.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list05.jpg" alt="轮播图"></div>
+        </div>
+    </div>
+    <div class="swiper-container landscape">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list01.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list06.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list03.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list04.jpg" alt="轮播图"></div>
+            <div class="swiper-slide"><img src="ossweb-img/slide-img-list05.jpg" alt="轮播图"></div>
+        </div>
+    </div>
+    <div class="swiper-button-prev portrait"></div>
+    <div class="swiper-button-next portrait"></div>
+    <div class="swiper-button-prev landscape"></div>
+    <div class="swiper-button-next landscape"></div>
+    <div style="clear: both"></div>
+    <a class="more" href="http://jxqy.qq.com/ingame/all/colleagues/index.html" onclick="PTTSendClick('btn','more','更多');"><span></span>更多花絮内容请点击</a>
+</section>
+<footer>
+    <img class="fl landscape" src="ossweb-img/footer-logo.jpg" alt="footer-logo">
+    <p class="fr">COPYRIGHT&nbsp;&copy;&nbsp;1998&nbsp;-&nbsp;2017&nbsp;TENCENT.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESERVED. 腾讯公司&nbsp;版权所有</p>
+</footer>
+<script src="//ossweb-img.qq.com/images/js/zepto/zepto1.2.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/swiper/swiper-3.4.2.min.js"></script>
+<script src="//imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2_zepto.js"></script>
+<script>
+    var mySwiper01 = new Swiper('.slide01 .swiper-container', {
+        autoplay:5000,
+        pagination : '.slide01 .swiper-pagination',
+        observer:true,
+        observeParents:true,
+        prevButton:'.slide01 .swiper-button-prev',
+        nextButton:'.slide01 .swiper-button-next',
+        loop: true//可选选项，自动滑动
+    });
+    var mySwiper02 = new Swiper('.slide02 .portrait.swiper-container', {
+        autoplay:5000,
+        observer:true,
+        observeParents:true,
+        prevButton:'.slide02 .portrait.swiper-button-prev',
+        nextButton:'.slide02 .portrait.swiper-button-next',
+        loop: true//可选选项，自动滑动
+    });
+    var mySwiper03 = new Swiper('.slide02 .landscape.swiper-container', {
+        autoplay:5000,
+        direction : 'vertical',
+        observer:true,
+        observeParents:true,
+        prevButton:'.slide02 .landscape.swiper-button-prev',
+        nextButton:'.slide02 .landscape.swiper-button-next',
+        loop: true//可选选项，自动滑动
+    });
+    $('.nav').on('click','li',function () {
+       var index = $(this).index();
+       $(this).addClass('active').siblings().removeClass('active');
+       $('.nav-content').eq(index).addClass('active').siblings().removeClass('active');
+    });
+    $('.top-video .top-btn').on('click',function () {
+        playVideo('t0507ppvg5m');
+    });
+    //判断网络环境
+    PTTNetType=(function(){
+        var str="NetType/";
+        var ua=navigator.userAgent;
+        if(ua.indexOf(str)!=-1){
+            return ua.substr(ua.indexOf(str) + 8, ua.indexOf(" ", ua.indexOf(str)) - ua.indexOf(str) - 8);
+        }else return "unknown";
+    })();
+    $(function () {
+        if(PTTNetType == 'WIFI')playVideo('t0507ppvg5m');
+    });
+    //初始化视频列表
+    function unitListEvent(vid,auto){//vid是视频的id,n是视频数组实例化序列,auto是否自动播放
+        var video = new tvp.VideoInfo();
+        video.setVid(vid);
+        var player =new tvp.Player();
+        if(!auto)auto=0;
+        player.create({
+            width:"100%",
+            height:"100%",
+            video:video,
+            modId:"video-box",
+            isHtml5UseAirPlay:true,
+            isHtml5UseFakeFullScreen:true,
+            autoplay:auto
+        });
+    }
+    function playVideo(sid){
+        unitListEvent(sid,1);
+        Zepto("#video-box").show();
+    }
+    //rem
+    (function (win, doc) {
+        if (!win.addEventListener) return;
+        var html = document.documentElement;
+        function setFont() {
+            var cliWidth = html.clientWidth;
+            html.style.fontSize = 100 * (cliWidth / 640) + 'px';
+        }
+        win.addEventListener('resize', setFont, false);
+        doc.addEventListener('DOMContentLoaded', setFont, false);
+    })(window, document);
+</script>
+<!--<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+    //此段代码不能放到外链JS中，
+    var setSite = { //设置网站属性
+        siteType: "a20170525jxqyv", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+        pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+        pageName: "首页", //必填项:页面中文名
+        osact: 0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+        ingame: 1, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+        stayTime: 0 //选填项:是否需要统计停留时长boolean；默认是0
+    };
+    if (typeof(pgvMain) == 'function') pgvMain();
+</script> -->
+</body>
+</html>

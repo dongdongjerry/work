@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <style>
+        /* 判断手机横竖屏 */
+        @media screen and (orientation:portrait) {
+            body{
+                color: aqua;
+            }
+        }
+        @media screen and (orientation:landscape) {
+            body{
+                color: crimson;
+            }
+        }
+        p{
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+<p>判断横竖屏幕</p>
+<div class="bg1">
+    <div class="box1"></div>
+</div>
+</body>
+<script>
+    //屏幕适应
+    /*var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+    window.addEventListener(evt, resizefn, false);//添加屏幕旋转事件
+    function resizefn() {
+        var html = document.documentElement;
+        var k = 640;
+        html.style.fontSize = html.clientWidth / k * 100 + "px";
+        console.log("旋转");
+    }
+    resizefn();*/
+    window.onresize = resize;
+    function resize()
+    {
+        var html = document.documentElement;
+        var k = 640;
+        html.style.fontSize = html.clientWidth / k * 100 + "px";
+        console.log("旋转");
+    }
+    resize();
+
+    /*(function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 10 * (clientWidth / 640) + 'px';
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);*/
+</script>
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="gbk"/>
+    <meta name="robots" content="all"/>
+    <meta name="author" content="Tencent-TGideas"/>
+    <meta name="Copyright" content="Tencent"/>
+    <meta name="Keywords" content="剑侠情缘手游,剑侠手游,剑侠情缘移动版,剑侠移动版,剑侠情缘手机版,剑侠手机版,剑侠情缘,剑网手游,剑侠情缘网络版，武侠手游"/>
+    <meta name="Description" content="《剑侠情缘手游》官方网站，《剑侠情缘手游》是剑侠情缘系列首款手游，由原班人马打造，游戏还原了端游中经典的门派以及宋金战场、白虎堂等经典玩法。同时手游版还将开放家族系统、结婚等社交系统，给予玩家一个更丰富，“有人味”的江湖。在还原经典的基础上，手游版将会打造一个更为开放的大世界，让告别房间式RPG体验，让玩家随时随地闯荡江湖。"/>
+    <!-- 设计：cp | 重构：cp | 创建：2017/05/31 | -->
+    <title>剑侠情缘手游-官方网站-腾讯游戏-代言人落地页</title>
+    <style>
+        /*reset*/
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+        table{border-collapse:collapse;border-spacing:0}
+        fieldset,img{border:0}
+        address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+        ol,ul{list-style:none}
+        caption,th{text-align:left}
+        h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+        q:before,q:after{content:''}
+        abbr,acronym{border:0;font-variant:normal}
+        sup{vertical-align:text-top}
+        sub{vertical-align:text-bottom}
+        input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+        input,textarea,select{*font-size:100%}
+        a {text-decoration: none;overflow: hidden;outline: none;}
+        a:-webkit-any-link {color: -webkit-link;cursor: auto;text-decoration: none;}
+        /*common*/
+        body{
+            position: relative;
+        }
+        .bg{
+            width: 100%;
+            min-width: 1200px;
+        }
+        .layout{
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .logo{
+            display: block;
+            position: absolute;
+            top:10px;
+            left: 0;
+        }
+
+        /*footer*/
+        .footer_bg{
+            position: absolute;
+            bottom: 0;
+            clear:both;
+            font-size: 12px;
+            background:url("ossweb-img/footer-bg.png") center top no-repeat;
+            width: 100%;
+            min-width: 1200px;
+            z-index:5;
+        }
+        .gw_footer a,.gw_footer{color:#ffffff}
+        .gw_logo1 {background-position: -228px -49px;height: 35px; }
+        .gw_logo0 {background-position: -115px -49px;height: 38px;}
+        .gw_footer{padding:24px 0;*padding:24px 0;clear:both;text-align:center;overflow:hidden;margin:0 auto;line-height:20px}
+        .gw_footer *{margin:0;padding:0}
+        .gw_footer img{border:none}
+        .foot_l_p{height:40px}
+        .foot_r_p{width:621px}
+        .gw_footer .tn{text-indent:-9999em;overflow:hidden;display:block}
+        .foot_logo{width:166px;height:31px;margin-right:10px;overflow:hidden}
+        .foot_logo .glogo{width:166px;height:31px;overflow:hidden;background-repeat:no-repeat;_background:none}
+        .other_logo{overflow:hidden}
+        .other_logo a,.other_logo span{display:block;margin-right:10px}
+        .foot_r_p span{display:inline-block;margin:0 5px 0;*margin-bottom:7px;margin-bottom:0\0;width:1px;height:15px;overflow:hidden}
+        .gw_footer .e{text-align:left;height:19px;overflow:hidden;font-family:Tahoma}
+        .gw_footer .fl{float:left;font-size:11px;font-size:10px\9;line-height:19px}
+        .gw_footer .fr{float:right}
+        .gw_footer .license{padding-left:10px;clear:both;text-align:left;height:25px;line-height:25px}
+        .glogos{background:url("//ossweb-img.qq.com/images/js/foot_js/images/foot_logo_s.png") no-repeat;}
+        .glogoq{background:url("//ossweb-img.qq.com/images/js/foot_js/images/foot_logo_q.png") no-repeat;}
+        .xsj-logo { width:85px; height:35px; background-image:url(//game.gtimg.cn/images/jxqy/web201603/copy.png); text-indent:-9999px; margin-left:30px;}
+        .bg1{
+            height: 594px;
+            background: url("ossweb-img/bg_01.jpg") center top no-repeat;
+        }
+        .bg2{
+            height: 693px;
+            background: url("ossweb-img/bg_02.jpg") center top no-repeat;
+        }
+        .bg3{
+            height: 674px;
+            background: url("ossweb-img/bg_03.jpg") center top no-repeat;
+        }
+        .bg4{
+            height: 911px;
+            background: url("ossweb-img/bg_04.jpg") center top no-repeat;
+            overflow: hidden;
+        }
+
+        .logo{
+            position: absolute;
+            top:20px;
+            left:0;
+            width: 174px;
+            height: 90px;
+            background: url("ossweb-img/logo.png") center center no-repeat;
+        }
+        .top-other {
+            position: absolute;
+            top:20px;
+            right: 0;
+            clear: both;
+            zoom: 1;
+            height: 32px;
+            line-height: 32px;
+        }
+        .top-other .go-home{
+            display: block;
+            float: left;
+            margin-right:10px;
+            width: 113px;
+            height: 31px;
+            background: url("ossweb-img/gohome.png") center center no-repeat;
+        }
+        .top-other .share-title{
+            float: left;
+            margin-right:10px;
+            font-size:16px;
+            line-height: 32px;
+            color: #4a7080;
+        }
+        .top-other .share-list{
+            display: block;
+            float: left;
+        }
+        .top-other .share-list li{
+            float: left;
+            position: relative;
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin: 4px 1px;
+            cursor: pointer;
+        }
+        .top-other li > img{
+            width: 100%;
+            height:auto;
+        }
+        .top-other li p{
+            display: none;
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            padding: 10px;
+            top: 30px;
+            left: 50%;
+            margin-left: -65px;
+            border-radius: 5px;
+            background: #d6c2b3;
+            background: rgba(255,255,255,.5);
+        }
+        .top-other li p img{
+            width: 110px;
+            height: 110px;
+        }
+        .btn-video{
+            position: absolute;
+            top: 280px;
+            right: 330px;
+            width: 73px;
+            height: 84px;
+            background: url("ossweb-img/btn-video.png") center center no-repeat;
+        }
+
+        .bg2 .layout{
+            width: 1000px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .bg2 .fl,.sidebar{
+            float: left;
+            width: 238px;
+            padding-top:10px;
+            padding-bottom:10px;
+            *padding-top:10px;
+            *padding-bottom:10px;
+            border: 1px solid #c4cdd3;
+            background: #f3f3f3;
+        }
+        .bg2 .fl img,.sidebar img{
+            width: auto;
+            height: auto;
+
+        }
+        .bg2 .fl p,.sidebar p{
+            font-size:20px;
+            color: #2f4f64;
+            line-height:42px;
+        }
+        .bg2 .fl a img,.sidebar a img{
+           width: auto;
+            height:auto;
+        }
+
+        .bg2 .fr{
+            float: right;
+            width: 760px;
+            height: 582px;
+            background: url("ossweb-img/order-list-bg.png") center top no-repeat;
+        }
+        .title{
+            text-align: center;
+            font-size:40px;
+            color: #a2524f;
+            padding:20px 0;
+            *padding: 20px 0;
+            background: url("ossweb-img/title-bg.png") center center no-repeat;
+        }
+        .bg2 .fr img{
+            margin: 5px 0;
+        }
+
+        .bg3 .layout{}
+        .scrolls{
+            width: 100%;
+            overflow: hidden;
+            clear: both;
+            zoom: 1;
+            text-align: center;
+        }
+        .scrolls li{
+            margin-right:5px;
+            display: inline-block;
+            *display: inline;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .scrolls li p{
+            float: left;
+            display: block;
+            width: 90px;
+            height: 485px;
+            background: url("ossweb-img/scrolls-list-bg.png") center center no-repeat;
+        }
+        .scrolls li span{
+            display: block;
+            margin: 0 auto;
+            color: #f35151;
+            font-size:20px;
+            width: 20px;
+            line-height:24px;
+            margin-bottom:10px;
+        }
+        .scrolls li img{
+            display: none;
+            float: left;
+            position: relative;
+            top:41px;
+            height:405px;
+        }
+        .scrolls li.on img{
+            display: inline-block;
+        }
+        .sidebar{
+            display: none;
+            position: fixed;
+            left:5%;
+            top:30%;
+            text-align: center;
+            width: 170px;
+            z-index:999;
+        }
+        .sidebar .sidebar-logo{
+            width: 70%;
+        }
+        .sidebar img{
+            width: 88%;
+        }
+        .sidebar a img{
+            width: 88%;
+        }
+        .sidebar p{
+            font-size:16px;
+        }
+        .sidebar .return-home img{
+            margin-top:5px;
+        }
+
+        .bg4 .layout{
+            width:1000px;
+        }
+        .bg4 .fl{
+            position: relative;
+        }
+        .bg4 .fl li{
+            display: none;
+        }
+        .bg4 .fl li.on{
+            display: block;
+        }
+        .bg4 .fl .explain{
+            position: absolute;
+            top:150px;
+            left:0;
+            z-index:4;
+        }
+        .bg4 .fl .model{
+            position: absolute;
+            z-index:3;
+        }
+        .bg4 .fl .model img{
+            display: block;
+        }
+
+        .bg4 .fr{
+            position: absolute;
+            top:180px;
+            right:0;
+            width: 140px;
+            overflow: hidden;
+            clear: both;
+            zoom: 1;
+            z-index:5;
+        }
+        .bg4 .fr li{
+            float: left;
+            width: 66px;
+            height: 77px;
+            margin-right:4px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .bg4 .wud{
+            background-image: url("ossweb-img/icon-wud.png");
+        }
+        .bg4 .wud.on{
+            background-image: url("ossweb-img/icon-hover-wud.png");
+        }
+        .bg4 .sl{
+            background-image: url("ossweb-img/icon-sl.png");
+        }
+        .bg4 .sl.on{
+            background-image: url("ossweb-img/icon-hover-sl.png");
+        }
+        .bg4 .th{
+            background-image: url("ossweb-img/icon-th.png");
+        }
+        .bg4 .th.on{
+            background-image: url("ossweb-img/icon-hover-th.png");
+        }
+        .bg4 .cy{
+            background-image: url("ossweb-img/icon-cy.png");
+        }
+        .bg4 .cy.on{
+            background-image: url("ossweb-img/icon-hover-cy.png");
+        }
+        .bg4 .tw{
+            background-image: url("ossweb-img/icon-tw.png");
+        }
+        .bg4 .tw.on{
+            background-image: url("ossweb-img/icon-hover-tw.png");
+        }
+        .bg4 .gb{
+             background-image: url("ossweb-img/icon-gb.png");
+         }
+        .bg4 .gb.on{
+            background-image: url("ossweb-img/icon-hover-gb.png");
+        }
+        .bg4 .xy{
+            background-image: url("ossweb-img/icon-xy.png");
+        }
+        .bg4 .xy.on{
+            background-image: url("ossweb-img/icon-hover-xy.png");
+        }
+        .bg4 .wd{
+            background-image: url("ossweb-img/icon-wd.png");
+        }
+        .bg4 .wd.on{
+            background-image: url("ossweb-img/icon-hover-wd.png");
+        }
+        .bg4 .em{
+            background-image: url("ossweb-img/icon-em.png");
+        }
+        .bg4 .em.on{
+            background-image: url("ossweb-img/icon-hover-em.png");
+        }
+        .bg4 .tm{
+            background-image: url("ossweb-img/icon-tm.png");
+        }
+        .bg4 .tm.on{
+            background-image: url("ossweb-img/icon-hover-tm.png");
+        }
+        .bg4 .tr{
+            background-image: url("ossweb-img/icon-tr.png");
+        }
+        .bg4 .tr.on{
+            background-image: url("ossweb-img/icon-hover-tr.png");
+        }
+        .bg4 .kl{
+            background-image: url("ossweb-img/icon-kl.png");
+        }
+        .bg4 .kl.on{
+            background-image: url("ossweb-img/icon-hover-kl.png");
+        }
+        .dia-close {
+            position: absolute;
+            width: 51px;
+            height: 51px;
+            right: -52px;
+            top: 0;
+            text-indent: -9999px;
+            cursor: pointer;
+            background: url(ossweb-img/cross.png) left center no-repeat;
+        }
+        .dia-close:hover {
+            background: url(ossweb-img/cross.png) right center no-repeat;
+        }
+    </style>
+</head>
+<body>
+<!--bg1-->
+<div class="bg bg1">
+    <div class="layout">
+        <a class="logo" href="http://jxqy.qq.com/main.shtml" onclick="PTTSendClick('btn','index','官网');"></a>
+        <div class="top-other">
+            <a class="go-home" href="http://jxqy.qq.com/main.shtml" onclick="PTTSendClick('btn','index','官网');"></a>
+            <span class="share-title">分享到:</span>
+            <ul class="share-list">
+                <li>
+                    <img src="ossweb-img/share-icon-wx.png" alt="微信">
+                    <p>
+                        <img src="ossweb-img/code-wx.png">
+                    </p>
+                </li>
+                <li>
+                    <img src="ossweb-img/share-icon-wb.png" alt="微博">
+                    <p>
+                        <img src="ossweb-img/code-wb.jpg">
+                    </p>
+                </li>
+                <li>
+                    <img src="ossweb-img/share-icon-qq.png" alt="微博">
+                    <p>
+                        <img src="ossweb-img/code-qq.png">
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <a class="btn-video" href="javascript:showDia('dia');" onclick="PTTSendClick('btn','video','播放视频');"></a>
+    </div>
+</div>
+<!--bg2-->
+<div class="bg bg2">
+    <div class="layout">
+        <div class="fl">
+            <img src="ossweb-img/code.png" alt="二维码">
+            <p>&lfloor; 扫一扫立即下载 &rceil;</p>
+            <a class="down-ios" href="http://jxqy.qq.com/d/?device=iphone" onclick="PTTSendClick('btn','down','ios下载');">
+                <img src="ossweb-img/btn-down-ios.png" alt="ios">
+            </a>
+            <a class="down-az" href="http://jxqy.qq.com/d/?device=android" onclick="PTTSendClick('btn','down','安卓下载');">
+                <img src="ossweb-img/btn-down-az.png" alt="ios">
+            </a>
+            <a class="down-mn" href="http://jxqy.qq.com/cp/a20170601jxqy/index.html?ADTAG=o2.107380.tgl.470.5150.0" onclick="PTTSendClick('btn','down','电脑版下载');">
+                <img src="ossweb-img/btn-down-mn.png" alt="ios">
+            </a>
+        </div>
+        <div class="fr">
+            <div class="title">下载游戏&nbsp;福利多多</div>
+            <img src="ossweb-img/order-list01.png" alt="福利">
+            <img src="ossweb-img/order-list02.png" alt="福利">
+        </div>
+    </div>
+</div>
+<!--bg3-->
+<div class="bg bg3">
+    <div class="layout">
+        <div class="title">绚丽江湖&nbsp;多彩武林</div>
+        <ul class="scrolls">
+            <li class="on">
+                <p>
+                    <span style="margin-top:120px">筑江湖家园</span>
+                    <span>邀知己同聚</span>
+                </p>
+                <img src="ossweb-img/list-img01.jpg" alt="">
+            </li>
+            <li>
+                <p>
+                    <span style="margin-top:130px">十二门派</span>
+                    <span>论剑江湖</span>
+                </p>
+                <img src="ossweb-img/list-img02.jpg" alt="">
+            </li>
+            <li>
+                <p>
+                    <span style="margin-top:120px">江湖多奇遇</span>
+                    <span>谈笑有情缘</span>
+                </p>
+                <img src="ossweb-img/list-img03.jpg" alt="">
+            </li>
+            <li>
+                <p>
+                    <span style="margin-top:130px">百变造型</span>
+                    <span>千色江湖</span>
+                </p>
+                <img src="ossweb-img/list-img04.jpg" alt="">
+            </li>
+            <li>
+                <p>
+                    <span style="margin-top:130px">以武会友</span>
+                    <span>为爱而战</span>
+                </p>
+                <img src="ossweb-img/list-img05.jpg" alt="">
+            </li>
+            <li>
+                <p>
+                    <span style="margin-top:130px">荣誉之路</span>
+                    <span>战斗相伴</span>
+                </p>
+                <img src="ossweb-img/list-img06.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+</div>
+<!--bg4-->
+<div class="bg bg4">
+    <div class="layout">
+        <div class="title">十二门派&nbsp;江湖争鼎</div>
+        <ul class="fl">
+            <li class="on">
+                <img class="explain" src="ossweb-img/text-wud.png" alt="武当">
+                <div class="model" style="left: 180px">
+                    <img src="ossweb-img/model-wud_01.png">
+                    <img src="ossweb-img/model-wud_02.png">
+                    <img src="ossweb-img/model-wud_03.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-sl.png" alt="少林">
+                <div class="model" style="top: 32px;left: -200px">
+                    <img src="ossweb-img/model-sl_01.png">
+                    <img src="ossweb-img/model-sl_02.png">
+                    <img src="ossweb-img/model-sl_03.png">
+                    <img src="ossweb-img/model-sl_04.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-th.png" alt="桃花">
+                <div class="model" style="top: 37px;left: 180px">
+                    <img src="ossweb-img/model-th_01.png">
+                    <img src="ossweb-img/model-th_02.png">
+                    <img src="ossweb-img/model-th_03.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-cy.png" alt="翠烟">
+                <div class="model" style="top: 13px;left: 100px">
+                    <img src="ossweb-img/model-cy_01.png">
+                    <img src="ossweb-img/model-cy_02.png">
+                    <img src="ossweb-img/model-cy_03.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-tw.png" alt="天王">
+                <div class="model" style="top: 26px;left: 200px">
+                    <img src="ossweb-img/model-tw_01.png">
+                    <img src="ossweb-img/model-tw_02.png">
+                    <img src="ossweb-img/model-tw_03.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-gb.png" alt="丐帮">
+                <div class="model" style="top: -7px;left: -120px">
+                    <img src="ossweb-img/model-gb_01.png">
+                    <img src="ossweb-img/model-gb_02.png">
+                    <img src="ossweb-img/model-gb_03.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-xy.png" alt="逍遥">
+                <div class="model" style="top: 15px;left: 240px">
+                    <img src="ossweb-img/model-xy_01.png">
+                    <img src="ossweb-img/model-xy_02.png">
+                    <img src="ossweb-img/model-xy_03.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-wd.png" alt="五毒">
+                <div class="model" style="top: -12px;left: 330px">
+                    <img src="ossweb-img/model-wd_01.png">
+                    <img src="ossweb-img/model-wd_02.png">
+                    <img src="ossweb-img/model-wd_03.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-em.png" alt="峨眉">
+                <div class="model" style="top: 32px;left: 240px">
+                    <img src="ossweb-img/model-em_01.png">
+                    <img src="ossweb-img/model-em_02.png">
+                    <img src="ossweb-img/model-em_03.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-tm.png" alt="唐门">
+                <div class="model" style="top: 40px;left: -160px">
+                    <img src="ossweb-img/model-tm_01.png">
+                    <img src="ossweb-img/model-tm_02.png">
+                    <img src="ossweb-img/model-tm_03.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-tr.png" alt="天忍">
+                <div class="model" style="top: 60px;left: 270px">
+                    <img src="ossweb-img/model-tr_01.png">
+                    <img src="ossweb-img/model-tr_02.png">
+                </div>
+            </li>
+            <li>
+                <img class="explain" src="ossweb-img/text-kl.png" alt="昆仑">
+                <div class="model" style="top: 11px;left: 170px">
+                    <img src="ossweb-img/model-kl_01.png">
+                    <img src="ossweb-img/model-kl_02.png">
+                    <img src="ossweb-img/model-kl_03.png">
+                </div>
+            </li>
+        </ul>
+        <ul class="fr">
+            <li class="wud on"></li>
+            <li class="sl"></li>
+            <li class="th"></li>
+            <li class="cy"></li>
+            <li class="tw"></li>
+            <li class="gb"></li>
+            <li class="xy"></li>
+            <li class="wd"></li>
+            <li class="em"></li>
+            <li class="tm"></li>
+            <li class="tr"></li>
+            <li class="kl"></li>
+        </ul>
+    </div>
+</div>
+<!--侧边导航-->
+<div class="sidebar">
+    <img class="sidebar-logo" src="ossweb-img/logo-icon.png" alt="logo">
+    <p>5月27日&nbsp;全新上线</p>
+    <img src="ossweb-img/code.png" alt="二维码">
+    <p>&lfloor; 扫一扫立即下载 &rceil;</p>
+    <a class="down-ios" href="http://jxqy.qq.com/d/?device=iphone" onclick="PTTSendClick('btn','down','ios下载');">
+        <img src="ossweb-img/btn-down-ios.png" alt="ios">
+    </a>
+    <a class="down-az" href="http://jxqy.qq.com/d/?device=android" onclick="PTTSendClick('btn','down','安卓下载');">
+        <img src="ossweb-img/btn-down-az.png" alt="ios">
+    </a>
+    <a class="down-mn" href="http://jxqy.qq.com/cp/a20170601jxqy/index.html?ADTAG=o2.107380.tgl.470.5150.0" onclick="PTTSendClick('btn','down','电脑版下载');">
+        <img src="ossweb-img/btn-down-mn.png" alt="ios">
+    </a>
+    <a class="return-home" href="http://jxqy.qq.com/main.shtml" onclick="PTTSendClick('btn','index','返回官网');">
+        <img src="ossweb-img/gohome02.png" alt="官网">
+    </a>
+</div>
+<!--footer-->
+<div class="footer_bg">
+    <div class="gw_footer" id="gw_ft" style="width: 975px;">
+        <div id="foot_l_p" class="fl foot_l_p" style="width: 343px;">
+            <p class="fl foot_logo">
+                <a title="腾讯互动娱乐" target="_blank" href="//ieg.tencent.com/" id="glogo" class="glogo tn glogoq">腾讯互动娱乐</a>
+            </p>
+            <div id="other_logo" class="fl other_logo">
+                <a href="javascript:" class="xsj-logo" title="西山居">西山居</a>
+            </div>
+        </div>
+        <div class="fr foot_r_p">
+            <p>
+                <a target="_blank" href="//ieg.tencent.com/">腾讯互动娱乐</a><span>|</span><a target="_blank" href="//game.qq.com/contract.shtml">服务条款</a><span>|</span><a target="_blank" href="//adver.qq.com/">广告服务</a><span>|</span><a target="_blank" href="//game.qq.com/hr/">腾讯招聘</a><span>|</span><a target="_blank" href="//service.qq.com/">腾讯游戏客服</a><span>|</span><a target="_blank" href="//game.qq.com/gnav/">游戏地图</a><span>|</span><a target="_blank" href="//tgact.qq.com/">游戏活动</a><span>|</span><a target="_blank" href="//game.qq.com/portal2010/business.htm">商务合作</a><span>|</span><a target="_blank" href="//www.qq.com/">腾讯网</a><span>|</span><a target="_blank" href="//www.qq.com/map/">网站导航</a>
+            </p>
+            <div class="e">
+                <p class="fl">
+                    COPYRIGHT ?2016 TENCENT. ALL RIGHTS RESERVED.
+                </p>
+                <p class="fr">
+                    <a target="_blank" href="//www.tencent.com/law/mo_law.shtml?/law/copyright.htm">腾讯公司版权所有</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--视频弹窗-->
+<!--弹窗内容-->
+<div class="dia" id="dia" style="display:none">
+    <div class="dia-con" id="mod_player"></div>
+    <a class="dia-close" href="javascript:showDialog.hide()" title="关闭" onclick="PTTSendClick('btn','close','关闭视频');">×</a>
+</div>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+<script src="//imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_jq.js"></script>
+<script>
+    jQuery.fn.slideLeftHide = function( speed, callback ) {
+        this.animate({
+            width : "hide",
+            paddingLeft : "hide",
+            paddingRight : "hide",
+            marginLeft : "hide",
+            marginRight : "hide"
+        }, speed, callback );
+    };
+    jQuery.fn.slideLeftShow = function( speed, callback ) {
+        this.animate({
+            width : "show",
+            paddingLeft : "show",
+            paddingRight : "show",
+            marginLeft : "show",
+            marginRight : "show"
+        }, speed, callback );
+    };
+</script>
+<script>
+    $(function () {
+        //分享二维码
+        $('.share-list li').hover(function () {
+            $(this).children('p').show();
+        },function () {
+            $(this).children('p').hide();
+        });
+        //导航栏
+        $(window).scroll(function(event) {
+            /* Act on the event */
+            if($(this).scrollTop()>930){
+                $(".sidebar").fadeIn(200);
+            }else{
+                $(".sidebar").fadeOut(200);
+            }
+        });
+        //卷轴
+        $('.scrolls').on('click','li',function () {
+            //$(this).addClass('on').siblings().removeClass('on');
+            $(this).children('img').slideLeftShow(500);
+            $(this).siblings().children('img').slideLeftHide(500);
+        });
+        //视频
+        var video = new tvp.VideoInfo();
+        video.setVid("t0507ppvg5m");
+        var player = new tvp.Player();
+        player.create({
+            width: 1000,
+            height: 625,
+            video: video,
+            modId: "mod_player",
+            pic: "//ossweb-img.qq.com/images/roco/act/a20120925movie/video_pic.jpg", //视频封面地址
+            vodFlashSkin: "//imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf", //精简皮肤
+            autoplay: true //是否自动播放
+        });
+        //十二门派介绍
+        $('.bg4 .fr').on('click','li',function () {
+            var index = $(this).index();
+           $(this).addClass('on').siblings().removeClass('on');
+            $('.bg4 .fl').children('li').eq(index).addClass('on').siblings().removeClass('on');
+        });
+    });
+    //弹窗
+    function showDia(e){
+        showDialog.show({
+            id:e,    //需要弹出的id，如果是弹出页面上的div，则该选项为必选
+            bgcolor:"#000000",//弹出“遮罩”的颜色，格式为"#FF6600"，可选，默认为"#fff"
+            opacity:50     //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+        });
+    }
+</script>
+<!--<script src="//ossweb-img.qq.com/images/js/title.js"></script>
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+    //此段代码不能放到外链JS中，
+    var setSite={ //设置网站属性
+        siteType:"a20170531jxqy", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+        pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+        pageName:"代言人落地页", //必填项:页面中文名
+        osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+        ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+        stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+    };
+    if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>-->
+</body>
+</html>

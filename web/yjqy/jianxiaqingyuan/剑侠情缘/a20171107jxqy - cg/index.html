@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN=">
+<head>
+    <meta charset="gbk">
+    <meta name="robots" content="all">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="author" content="Tencent-CP">
+    <meta name="Copyright" content="Tencent">
+    <meta name="剑侠情缘活动介绍页面" content="">
+    <meta name="剑侠情缘活动介绍页面" content="腾讯游戏">
+    <title>剑侠情缘- 剑侠情缘官方网站 - 腾讯游戏</title>
+    <!-- 页面设计：cp | 页面制作：cp | 创建：2017-11-6 -->
+    <style>
+        body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,div{margin:0}
+        body,button,input,select,textarea{font:12px/1.5 tahoma,'\5b8b\4f53',sans-serif}
+        h1,h2,h3,h4,h5,h6{font-size:100%}
+        em,b{font-style:normal}
+        a{text-decoration:none}
+        a:hover{text-decoration:underline}
+        img{border:0}
+        button,input,select,textarea{font-size:100%;outline:none}
+        table{border-collapse:collapse;border-spacing:0}
+        ul,li{ list-style: none; }
+        td,th,ul,ol{padding:0}
+
+        .clearFloat{
+            overflow: hidden;
+        }
+        .emptyBox{
+            clear: both;
+        }
+        /*.clearUpperM{
+            padding-top: 1px;
+            margin-top: -1px;
+        }*/
+        body{
+            min-width: 1200px;
+        }
+        /*居中容器*/
+        .content{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        /*相对定位容器*/
+        .relative-box{
+            position: relative;
+        }
+
+        /*修改p标签鼠标悬浮样式，禁止复制*/
+        p{
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            cursor: default;
+        }
+        /*---------------bg1--------------*/
+        .bg1{
+            width: 100%;
+            height: 596px;
+            background: url("ossweb-img/bg_01.jpg") center center no-repeat;
+            position: relative;
+        }
+        .logo{
+            position: absolute;
+            top: 20px;
+            left: -100px;
+        }
+        .share{
+            position: absolute;
+            top: 22px;
+            right: -88px;
+        }
+        .btn-index1{
+            float: left;
+            margin-right: 10px;
+        }
+        .share-title{
+            font-size: 14px;
+            line-height: 32px;
+            color: #88b0c8;
+        }
+        .share-list{
+            float: right;
+            padding-top: 5px;
+            padding-left: 10px;
+        }
+        .share-list li{
+            float: left;
+            cursor: pointer;
+            position: relative;
+        }
+        .share-list>li .QRcode{
+            position: absolute;
+            top: 28px;
+            left: -40px;
+            display: none;
+        }
+        .share-list>li:hover .QRcode{
+            display: block;
+        }
+        .btn-video{
+            position: absolute;
+            top: 273px;
+            right: 229px;
+        }
+
+        /*-----------------bg2-------------------*/
+        .bg2{
+            width: 100%;
+            height: 694px;
+            background: url("ossweb-img/bg_02.jpg") center center no-repeat;
+        }
+        .fl{
+            width: 237px;
+            height: 603px;
+            float: left;
+            background: url("ossweb-img/bg-down-navbig.png") center center no-repeat;
+            text-align: center;
+        }
+        .fl>img{
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        .fr{
+            width: 763px;
+            height: 603px;
+            float: left;
+            margin-left: -3px;
+            background: url("ossweb-img/bg-welfare.png") center center no-repeat;
+        }
+        .tit{
+            width: 100%;
+            background: url("ossweb-img/bg-tit.png") center center no-repeat;
+            text-align: center;
+            font-size: 42px;
+            color: #a2524f;
+        }
+        .order-list{
+            text-align: center;
+        }
+        .welfare-tit{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .order-list>img{
+            margin-bottom: 30px;
+        }
+
+        /*--------------------bg3-----------------------*/
+        .bg3{
+            width: 100%;
+            height: 675px;
+            background: url("ossweb-img/bg_03.jpg") center center no-repeat;
+        }
+        .bg3-tit{
+            margin: 20px 0 45px 0;
+
+        }
+        .scrolls-list{
+            width: 100%;
+            overflow: hidden;
+            overflow: hidden;
+        }
+        .scroll{
+            width: 92px;
+            height: 485px;
+            margin-right: 3px;
+            position: relative;
+            float: left;
+            overflow: hidden;
+
+
+
+        }
+        /*scroll初始化*/
+        .scroll-ini{
+            width: 517px;
+        }
+        .scroll-on{
+            width: 96px;
+            height: 485px;
+            position: absolute;
+            z-index: 2;
+            background: url("ossweb-img/img-scrolls.png") no-repeat;
+
+
+        }
+        .scroll-tit{
+            width: 30px;
+            position: absolute;
+            z-index: 3;
+            top:126px;
+            left: 35px;
+            font-size: 20px;
+            color: #f35151;
+            line-height: 20px;
+            letter-spacing: 40px;
+
+        }
+        /*卷轴6个背景*/
+        .scroll-canvas1,.scroll-canvas2,.scroll-canvas3,.scroll-canvas4,.scroll-canvas5,.scroll-canvas6{
+            width: 449px;
+            height: 405px;
+            position: absolute;
+            top: 41px;
+            left: 78px;
+            z-index: 1;
+        }
+        .scroll-canvas1{
+            background: url("ossweb-img/img-scroll01.jpg") center center no-repeat;
+        }
+        .scroll-canvas2{
+            background: url("ossweb-img/img-scroll02.jpg") center center no-repeat;
+        }
+        .scroll-canvas3{
+            background: url("ossweb-img/img-scroll03.jpg") center center no-repeat;
+        }
+        .scroll-canvas4{
+            background: url("ossweb-img/img-scroll04.jpg") center center no-repeat;
+        }
+        .scroll-canvas5{
+            background: url("ossweb-img/img-scroll05.jpg") center center no-repeat;
+        }
+        .scroll-canvas6{
+            background: url("ossweb-img/img-scroll06.jpg") center center no-repeat;
+        }
+        /*--------------------bg4---------------------------*/
+        .bg4{
+            width: 100%;
+            height: 912px;
+            background: url("ossweb-img/bg_04.jpg") center center no-repeat;
+            overflow: hidden;
+        }
+        .bg4 img{
+            display: block;
+        }
+        .model-list{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .model-list>li{
+            position: absolute;
+            display: none;
+            z-index: 0;
+        }
+        .model-list>.active{
+            display: inherit;
+        }
+        .bg4-tit{
+            margin-top: 55px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /*门派人物模型*/
+        .bg-model-01,.bg-model-02,.bg-model-03,.bg-model-04,.bg-model-05,.bg-model-06,
+        .bg-model-07,.bg-model-08,.bg-model-09,.bg-model-10,.bg-model-11,.bg-model-12{
+            position: absolute;
+        }
+        .bg-model-01{
+            top: -58px;
+            left: -1px;
+        }
+        .bg-model-02{
+            top: 8px;
+            left: -170px;
+        }
+        .bg-model-03{
+            top: -103px;
+            left: -17px;
+        }
+        .bg-model-04{
+            top: -13px;
+            left: -1px;
+        }
+        .bg-model-05{
+            top: -49px;
+            left: -1px;
+        }
+        .bg-model-06{
+            top: -76px;
+            left: -89px;
+        }
+        .bg-model-07{
+            top: -139px;
+            left: -460px;
+        }
+        .bg-model-08{
+            top: -37px;
+            left: -1px;
+        }
+        .bg-model-09{
+            top: -16px;
+            left: -1px;
+        }
+        .bg-model-10{
+            top: 2px;
+            left: -163px;
+        }
+        .bg-model-11{
+            top: -244px;
+            left: -1px;
+        }
+        .bg-model-12{
+            top: -109px;
+            left: -1px;
+        }
+        /*门派icon*/
+        .sect-list>li{
+            width: 66px;
+            height: 77px;
+            float: left;
+            margin-right: 3px;
+            background: url("ossweb-img/sprite-sect.png");
+            cursor: pointer;
+        }
+
+
+
+        /*--------------左侧导航栏--------------------*/
+        .nav-fix{
+            position: fixed;
+            width: 169px;
+            height: 608px;
+            background: url("ossweb-img/bg-down-nav.png") no-repeat;
+            z-index: 10;
+            top: 10%;
+            left: 0;
+            display: none;
+            text-align: center;
+        }
+        .opa-show{
+            display: block;
+        }
+        .nav-fix>img{
+            display: inline-block;
+            margin:10px 0 10px 0 ;
+        }
+        .nav-fix .fix-img{
+            margin-top: 30px;
+        }
+        .nav-fix>p{
+            font-size: 16px;
+            color: #628baf;
+            line-height: 0px;
+        }
+        .sect-list{
+            width: 144px;
+            position: relative;
+            z-index: 2;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<!--ba1-->
+<div class="bg1">
+    <div class="content relative-box">
+        <a href="" class="logo" onclick="PTTSendClick('btn','index','官网');"><img src="ossweb-img/btn-logo.png" width="174" height="90" alt="剑侠情缘官网"></a>
+        <div class="share">
+            <a href="" class="btn-index1" onclick="PTTSendClick('btn','index','官网');"><img src="ossweb-img/btn-index.png" width="113" height="31" alt="进入官网"></a>
+            <span class="share-title">分享到: </span>
+            <ul class="share-list">
+                <li>
+                    <img src="ossweb-img/share-icon-wx.png" width="24" height="24" alt="微信">
+                    <img src="ossweb-img/code-wx.png" width="110" height="110" alt="微信分享" class="QRcode">
+                </li>
+                <li>
+                    <img src="ossweb-img/share-icon-wb.png" width="24" height="24" alt="微博">
+                    <img src="ossweb-img/code-wb.jpg" width="110" height="110" alt="微博分享" class="QRcode">
+                </li>
+                <li>
+                    <img src="ossweb-img/share-icon-qq.png" width="24" height="24" alt="QQ">
+                    <img src="ossweb-img/code-qq.png" width="110" height="110" class="QRcode" class="QRcode">
+                </li>
+            </ul>
+        </div>
+        <a href="" class="btn-video" onclick="PTTSendClick('btn','video','播放视频');"><img src="ossweb-img/btn-video.png" width="73" height="84" alt="播放"></a>
+    </div>
+</div>
+<!--bg2-->
+<div class="bg2 ">
+    <div class="content clearFloat">
+        <div class="fl">
+            <img src="ossweb-img/img-downQR.png" width="221" height="257" alt="扫描二维码下载">
+            <a><img src="ossweb-img/btn-down-ios.jpg" width="221" height="90" alt="IOS下载"></a>
+            <a><img src="ossweb-img/btn-down-android.jpg" width="221" height="90" alt="安卓下载"></a>
+            <a><img src="ossweb-img/btn-down-pc.jpg" width="221" height="90" alt="电脑预约下载"></a>
+        </div>
+        <div class="fr">
+            <h3 class="tit welfare-tit">
+                下载游戏 福利多多
+            </h3>
+            <div class="order-list">
+                <img src="ossweb-img/img-order-list01.png" width="669" height="217" alt="玩法福利">
+                <img src="ossweb-img/img-order-list02.png" width="669" height="217" alt="玩法福利">
+            </div>
+        </div>
+    </div>
+</div>
+<!--bg3-->
+<div class="bg3">
+    <div class="content clearFloat">
+        <h3 class="tit bg3-tit">绚丽江湖 多彩武林</h3>
+        <!--卷轴-->
+        <div class="scrolls-list">
+            <div class="scroll scroll-ini">
+                <div class="scroll-on">
+                    <p class="scroll-tit">筑江湖家园<br><br>邀知己同聚</p>
+                </div>
+                <div class="scroll-canvas6"></div>
+
+            </div>
+            <div class="scroll">
+                <div class="scroll-on">
+                    <p class="scroll-tit">十二门派<br><br>论剑江湖</p>
+                </div>
+                <div class="scroll-canvas5"></div>
+
+            </div>
+            <div class="scroll">
+                <div class="scroll-on">
+                    <p class="scroll-tit">江湖多奇遇<br><br>谈笑有情缘</p>
+                </div>
+                <div class="scroll-canvas4"></div>
+
+            </div>
+            <div class="scroll">
+                <div class="scroll-on">
+                    <p class="scroll-tit">百变造型<br><br>千色江湖</p>
+                </div>
+                <div class="scroll-canvas3"></div>
+
+            </div>
+            <div class="scroll">
+                <div class="scroll-on">
+                    <p class="scroll-tit">以武会友<br><br>为爱而战</p>
+                </div>
+                <div class="scroll-canvas2"></div>
+
+            </div>
+            <div class="scroll">
+                <div class="scroll-on">
+                    <p class="scroll-tit">荣誉之路<br><br>战斗相伴</p>
+                </div>
+                <div class="scroll-canvas1"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--bg4-->
+<div class="bg4">
+    <div class="content">
+        <h3 class="tit bg4-tit">十二门派 江湖争顶</h3>
+        <!--人物模型背景-->
+        <ul class="model-list">
+        <li class="bg-model-01 active">
+            <img src="ossweb-img/img-wudang_01.png" width="1201" height="284" alt="武当">
+            <img src="ossweb-img/img-wudang_02.png" width="1201" height="284" alt="武当">
+            <img src="ossweb-img/img-wudang_03.png" width="1201" height="284" alt="武当">
+        </li>
+        <li class="bg-model-02">
+            <img src="ossweb-img/img-shaolin_01.png" width="1305" height="262" alt="少林">
+            <img src="ossweb-img/img-shaolin_02.png" width="1305" height="262" alt="少林">
+            <img src="ossweb-img/img-shaolin_03.png" width="1305" height="262" alt="少林">
+        </li>
+        <li class="bg-model-03">
+            <img src="ossweb-img/img-taohua_01.png" width="1081" height="299" alt="桃花">
+            <img src="ossweb-img/img-taohua_02.png" width="1081" height="299" alt="桃花">
+            <img src="ossweb-img/img-taohua_03.png" width="1081" height="299" alt="桃花">
+        </li>
+        <li class="bg-model-04">
+            <img src="ossweb-img/img-cuiyan_01.png" width="1122" height="269" alt="翠烟">
+            <img src="ossweb-img/img-cuiyan_02.png" width="1122" height="269" alt="翠烟">
+            <img src="ossweb-img/img-cuiyan_03.png" width="1122" height="269" alt="翠烟">
+        </li>
+        <li class="bg-model-05">
+            <img src="ossweb-img/img-tianwang_01.png" width="1221" height="281" alt="天王">
+            <img src="ossweb-img/img-tianwang_02.png" width="1221" height="281" alt="天王">
+            <img src="ossweb-img/img-tianwang_03.png" width="1221" height="281" alt="天王">
+        </li>
+        <li class="bg-model-06">
+            <img src="ossweb-img/img-gaibang_01.png" width="1312" height="290" alt="丐帮">
+            <img src="ossweb-img/img-gaibang_02.png" width="1312" height="290" alt="丐帮">
+            <img src="ossweb-img/img-gaibang_03.png" width="1312" height="290" alt="丐帮">
+        </li>
+        <li class="bg-model-07">
+            <img src="ossweb-img/img-xiaoyao_01.png" width="1491" height="311" alt="逍遥">
+            <img src="ossweb-img/img-xiaoyao_02.png" width="1491" height="311" alt="逍遥">
+            <img src="ossweb-img/img-xiaoyao_03.png" width="1491" height="311" alt="逍遥">
+        </li>
+        <li class="bg-model-08">
+            <img src="ossweb-img/img-wudu_01.png" width="1195" height="277" alt="五毒">
+            <img src="ossweb-img/img-wudu_02.png" width="1195" height="277" alt="五毒">
+            <img src="ossweb-img/img-wudu_03.png" width="1195" height="277" alt="五毒">
+        </li>
+        <li class="bg-model-09">
+            <img src="ossweb-img/img-emei_01.png" width="1379" height="270" alt="峨眉">
+            <img src="ossweb-img/img-emei_02.png" width="1379" height="270" alt="峨眉">
+            <img src="ossweb-img/img-emei_03.png" width="1379" height="270" alt="峨眉">
+        </li>
+        <li class="bg-model-10">
+            <img src="ossweb-img/img-tangmeng_01.png" width="1230" height="264" alt="唐门">
+            <img src="ossweb-img/img-tangmeng_02.png" width="1230" height="264" alt="唐门">
+            <img src="ossweb-img/img-tangmeng_03.png" width="1230" height="264" alt="唐门">
+        </li>
+        <li class="bg-model-11">
+            <img src="ossweb-img/img-tianren_01.png" width="1241" height="346" alt="天忍">
+            <img src="ossweb-img/img-tianren_02.png" width="1241" height="346" alt="天忍">
+            <img src="ossweb-img/img-tianren_03.png" width="1241" height="346" alt="天忍">
+        </li>
+        <li class="bg-model-12">
+            <img src="ossweb-img/img-kunlun_01.png" width="1148" height="301" alt="昆仑">
+            <img src="ossweb-img/img-kunlun_02.png" width="1148" height="301" alt="昆仑">
+            <img src="ossweb-img/img-kunlun_03.png" width="1148" height="301" alt="昆仑">
+        </li>
+        </ul>
+        <!--门派切换-->
+        <ul class="sect-list clearFloat">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="emptyBox"></div>
+    </div>
+</div>
+<div class="nav-fix">
+    <img src="ossweb-img/icon_1704_1024_PNG.jpg" width="111" height="111" alt="剑侠情缘">
+    <p>5月27日全新上线</p>
+    <img src="ossweb-img/img-downQR.png" width="147" height="174" alt="扫描二维码下载" class="fix-img">
+    <a href="" onclick="PTTSendClick('btn','down','ios下载');"><img src="ossweb-img/btn-down-ios.jpg" width="147" height="60" alt="IOS下载"></a>
+    <a href="" onclick="PTTSendClick('btn','down','安卓下载');"><img src="ossweb-img/btn-down-android.jpg" width="147" height="60" alt="安卓下载"></a>
+    <a href="" onclick="PTTSendClick('btn','down','PC预约下载');"><img src="ossweb-img/btn-down-pc.jpg" width="147" height="60" alt="电脑预约下载"></a>
+    <a href=""><img src="ossweb-img/btn-indx2.jpg" width="147" height="42" alt="官网"></a>
+</div>
+
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+<script src="//imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_jq.js"></script>
+<script>
+    $(document).ready(function () {
+        /*卷轴滚动，通过父元素overflow:hidden 实现*/
+        $(".scroll>.scroll-on").on("click",function () {
+            $(".scroll").stop();
+            $(this).parent(".scroll").animate({'width': '517px'},600).siblings(".scroll").animate({'width':'92px'},600);
+        });
+        /*显示侧边导航栏*/
+        $(window).scroll( function() {
+            if ($(document).scrollTop()>=800){
+                $(".nav-fix").addClass("opa-show");
+            }else {
+                $(".nav-fix").removeClass("opa-show");
+            }
+        });
+
+        /*统一设置门派icon*/
+        $(".sect-list>li").each(function (index) {
+            /*初始化第一个li*/
+            if(index == 0)
+            {
+                $(this).css({'backgroundPositionX': '66px','backgroundPositionY':'0px'});
+            }
+            else
+            {
+                var baseHigh=77 * (index) + 2*(index-1);
+                $(this).css({'backgroundPositionX': '0px','backgroundPositionY':baseHigh+'px'});
+            }
+
+            $(this).on("click",function () {
+                $(this).css({'backgroundPositionX': '66px'}).siblings("li").css({'backgroundPositionX':'0px'});
+                $(".model-list>li").eq(index).addClass("active").siblings("li").removeClass("active");
+            })
+
+        })
+    })
+
+</script>
+</body>
+</html>
