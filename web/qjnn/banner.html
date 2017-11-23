@@ -3,10 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .banner{
+            width: 1158px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .banner-container{
+            width: 1158px;
+            height: 500px;
+            overflow: hidden;
+        }
+        .banner-wrapper{
+            width: 4000px;
+        }
+        .banner-slide{
+            width: 579px;
+            height: 318.4px;
+            float: left;
+            position: relative;
+            opacity: 0.6;
+            z-index: 2;
+
+
+        }
+        .banner-slide>img{
+            width: 0;
+            height: 0;
+            transition:  all .5s;
+        }
+        .banner-slide-show>img{
+            width: 579px;
+            height: 318.4px;
+        }
+        .banner-slide-active{
+            position: absolute;
+            left: 17%;
+            top: -7%;
+            opacity: 1;
+            z-index: 5;
+        }
+        .banner-slide-active>img{
+            width: 724px;
+            height: 398px;
+        }
+        .btn-pre,.btn-next{
+            display: block;
+            width: 57px;
+            height: 61px;
+            position: absolute;
+            top: 28%;
+            z-index: 10;
+        }
+        .btn-pre{
+            left: 5%;
+            background: url("ossweb-img/btn_r.png") center center no-repeat;
+        }
+        .btn-next{
+            right: 5%;
+            background: url("ossweb-img/btn_l.png") center center no-repeat;
+        }
+    </style>
 </head>
 <body>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<div class="banner">
+    <div class="banner-container">
+        <div class="banner-wrapper">
+            <div class="banner-slide  banner-slide-show"><img src="ossweb-img/im4.jpg" width="724" height="398"></div>
+            <div class="banner-slide banner-slide-active"><img src="ossweb-img/im1.jpg" width="724" height="398"></div>
+            <div class="banner-slide  banner-slide-show"><img src="ossweb-img/im2.jpg" width="724" height="398"></div>
+            <div class="banner-slide"><img src="ossweb-img/im3.jpg" width="724" height="398"></div>
+            <div class="banner-slide"><img src="ossweb-img/im4.jpg" width="724" height="398"></div>
+            <div class="banner-slide "><img src="ossweb-img/im1.jpg" width="724" height="398"></div>
+        </div>
+    </div>
+    <a class="btn-pre"></a>
+    <a class="btn-next"></a>
+</div>
+
+
+
+
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
 <script>
+    var index = 1;
+    $(".btn-next").on("click",function () {
+        index = index + 1;
+        if(index>4){
+            index = 1;
+        }
+        $(".banner-wrapper").css({'margin-left':(1-index)*(579) + 'px'});
+        $(".banner-slide").eq(index).addClass("banner-slide-active banner-slide-show").siblings("div").removeClass("banner-slide-active banner-slide-show").prev("div").addClass("banner-slide-show").next("div").addClass("banner-slide-show");
+    });
+    $(".btn-pre").on("click",function () {
+        index = index - 1;
+        if(index<1){
+            index = 4;
+        }
+        $(".banner-wrapper").css({'margin-left':(1-index)*(579) + 'px'});
+        $(".banner-slide").eq(index).addClass("banner-slide-active").siblings("div").removeClass("banner-slide-active");
+    });
+
+
+
 
 </script>
 </body>
