@@ -10,9 +10,11 @@
 
 		.banner{overflow: hidden;width: 600px;margin:100px auto;padding: 10px; border:#666 solid 1px;box-shadow: 0 0 5px #666;}
 		.banner-list{height: 200px;overflow: hidden;}
-		.banner-items{height: 100px;margin-top: 50px;width: 1200px;margin-left: -200px;}
-		.banner-item{float: left;width: 200px;height: 100px;background: red;position: relative}
-		.banner-item img{display: block;height: 100%;width: 100%;position: absolute}
+		.banner-items{height: 100px;width: 1200px;margin-left: -200px;}
+		.banner-item{float: left;width: 200px;height: 200px;position: relative}
+		.banner-item.on{z-index: 3;position: relative;}
+		.banner-item.on img{width: 300px;z-index: 3;margin-left: -50px;margin-top: 50px;height: 200px;}
+		.banner-item img{display: block;height: 100px;width: 100%;margin-top: 50px;}
 
 
 	</style>
@@ -49,7 +51,7 @@
 		slideAni();
 	
 		function slideAni(){
-			$('.banner-items').animate({
+			$('.banner-items').finish().animate({
 				'marginLeft': _pos *  _itemWidth
 			},500,function(){
 				if(_pos == _posLeft){
@@ -62,24 +64,15 @@
 					'marginLeft':'-200px'
 				});
 			});
-            $('.banner-item').eq(_nowIndex).css({'z-index':5});
-			$('.banner-item').eq(_nowIndex).animate({
-				'margin-top':'-50px',
-				'height':'200px',
-				'width':'200px'
-
-			},1000).siblings().css({'z-index':2}).animate({
+//            $('.banner-item').eq(_nowIndex).css({'z-index':5});
+			$('.banner-item').eq(_nowIndex).addClass('on').find('img').finish().animate({
 				'margin-top':'0px',
+				'height':'200px'
+//				'width':'200px'
+
+			},500).parent().siblings().removeClass('on').find('img').finish().animate({
+				'margin-top':'50px',
 				'height':'100px'
-			});
-            $('.banner-item img').eq(_nowIndex).animate({
-                'height':'200px',
-                'width':'300px',
-				'left': '-40px'
-            },500).parent(".banner-item").siblings().children("img").animate({
-				'width': '200px',
-				'height':'100px',
-				'left':'0'
 			});
 
 		}

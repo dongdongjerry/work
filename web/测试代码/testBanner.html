@@ -10,7 +10,12 @@
     <div style="width: 100px;height: 100px;background: black;transform: scale(1,1)"></div>
 <script>
     function d_swiper(swiper,swiperpre,swipernext) {
-
+        this.swiper = swiper;
+        this.swiperpre = swiperpre;
+        this.swipernext = swipernext;
+    }
+    d_swiper.prototype.show  = function () {
+        console.log(this.swipernext + this.swiper + this.swiperpre);
     }
     
     
