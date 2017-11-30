@@ -10,7 +10,6 @@
     <meta name="Keywords" content="剑侠情缘，剑侠，情缘，剑侠手游，剑侠情缘手游">
     <meta name="Description" content="绝美国风，重制新生！《新剑侠情缘手游》焕新发布，全新画面和海量内容重磅更新，双性别天山强势登场，15大门派血战襄阳，赵丽颖、林更新入驻新服与千万侠士共闯江湖！">
     <title>剑侠情缘明星代言人 - 剑侠情缘官方网站 - 腾讯游戏</title>
-    <link href="css/common.css" rel="stylesheet">
     <link href="css/swiper-3.4.2.min.css" rel="stylesheet">
     <!-- 页面设计：cp | 页面制作：cp | 创建：2017-11-16 -->
     <style>
@@ -192,16 +191,22 @@
         .bottom-video-item>img{
             position: absolute;
         }
-        .bottom-video-item>img:nth-child(1){
+        .bottom-video-item>img{
             width: 100%;
             height: 100%;
         }
-        .bottom-video-item>img:nth-child(2){
+        .bottom-video-item>a{
+            position: absolute;
+            display: block;
             width: 0.47rem;
             height: 0.51rem;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+        }
+        .bottom-video-item>a>img{
+            width: 0.47rem;
+            height: 0.51rem;
         }
         .bottom-video-item>p{
             width: 90%;
@@ -214,6 +219,9 @@
             font-size: 0.18rem;
             color: #e0e2e4;
             line-height: 0.36rem;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
         }
 
 
@@ -461,25 +469,25 @@
                 <ul class="bottom-video-list">
                     <li class="bottom-video-item">
                         <img src="ossweb-img/video-img-list01.png">
-                        <img src="ossweb-img/video-btn-list.png">
+                        <a><img src="ossweb-img/video-btn-list.png"></a>
                         <p>剑侠情缘精彩花絮视频</p>
                         <div id="bottom-video-box-01"></div>
                     </li>
                     <li class="bottom-video-item">
                         <img src="ossweb-img/video-img-list02.jpg">
-                        <img src="ossweb-img/video-btn-list.png">
+                        <a><img src="ossweb-img/video-btn-list.png"></a>
                         <p>剑侠情缘精彩花絮视频</p>
                         <div id="bottom-video-box-02"></div>
                     </li>
                     <li class="bottom-video-item">
                         <img src="ossweb-img/video-img-list03.jpg">
-                        <img src="ossweb-img/video-btn-list.png">
+                        <a><img src="ossweb-img/video-btn-list.png"></a>
                         <p>剑侠情缘精彩花絮视频</p>
                         <div id="bottom-video-box-03"></div>
                     </li>
                     <li class="bottom-video-item">
                         <img src="ossweb-img/video-img-list04.jpg">
-                        <img src="ossweb-img/video-btn-list.png">
+                        <a><img src="ossweb-img/video-btn-list.png"></a>
                         <p>剑侠情缘精彩花絮视频</p>
                         <div id="bottom-video-box-04"></div>
                     </li>
@@ -523,7 +531,6 @@
     <footer>
         <p><img src="ossweb-img/footer-logo.jpg" class="landscape"><span>COPYRIGHT © 1998 – 2017 TENCENT. ALL RIGHTS RESERVED. 腾讯公司 版权所有</span></p>
     </footer>
-
 
 <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
 <script src="//ossweb-img.qq.com/images/js/swiper/swiper-3.4.2.min.js"></script>

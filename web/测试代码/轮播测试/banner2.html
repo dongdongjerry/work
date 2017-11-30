@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		li{list-style: none;}
+
+		.banner{
+			overflow: hidden;
+			width: 875px;
+			margin:100px auto;
+			padding: 10px;
+			border:#666 solid 1px;
+			box-shadow: 0 0 5px #666;}
+		.banner-list{
+			height: 518px;
+			overflow: hidden;}
+		.banner-items{
+			height: 100px;
+			width: 4000px;
+			margin-left: -290px;}
+		.banner-item{
+			float: left;
+			width: 290px;height: 429px;
+			position: relative;
+			opacity: 0.6;}
+		.banner-item.on{
+			z-index: 3;
+			position: relative;
+			opacity: 1;}
+		.banner-item.on img{
+			width: 322px;
+			z-index: 3;
+			margin-left: -20px;
+			margin-top: 50px;
+			height: 477px;}
+		.banner-item img{
+			display: block;
+			/*height: 100px;*/
+			width: 100%;
+			margin-top: 50px;}
+	</style>
+</head>
+<body>
+	
+
+	<div class="banner">
+		<div class="banner-list">
+			<ul class="banner-items">
+				<li class="banner-item"><img src="ossweb-img/banner-item1.png"></li>
+				<li class="banner-item"><img src="ossweb-img/banner-item1.png"></li>
+				<li class="banner-item"><img src="ossweb-img/banner-item1.png"></li>
+				<li class="banner-item"><img src="ossweb-img/banner-item1.png"></li>
+				<li class="banner-item"><img src="ossweb-img/banner-item1.png"></li>
+			</ul>
+		</div>
+		<a class="btn-prev" href="#">上一张</a>
+		<a class="btn-next" href="#">下一张</a>
+	</div>
+	<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		
+		var	_itemWidth = $('.banner-item').width(),
+			_itemLenght = $('.banner-item').length;
+		var _nowIndex = 2; 
+
+		var _pos,
+			_posLeft  = -2, 
+			_posRight = 0;
+
+		var $btnPrev = $('.btn-prev'),
+			$btnNext = $('.btn-next');
+
+		slideAni();
+	
+		function slideAni(){
+			$('.banner-items').finish().animate({
+				'marginLeft': _pos *  _itemWidth
+			},500,function(){
+				if(_pos == _posLeft){
+					$('.banner-item:first').appendTo('.banner-items');
+				}
+				else if( _pos == _posRight){
+					$('.banner-items').prepend($('.banner-item:last'));
+				}
+				$('.banner-items').css({
+					'marginLeft':'-290px'
+				});
+			});
+//            $('.banner-item').eq(_nowIndex).css({'z-index':5});
+			$('.banner-item').eq(_nowIndex).addClass('on').find('img').finish().animate({
+				'margin-top':'25px',
+                'width':'322px',
+				'height':'477px'
+			},150).parent().siblings().removeClass('on').find('img').finish().animate({
+				'margin-top':'50px',
+				'height':'429px',
+				'width':'290px'
+			});
+
+		}
+
+		$btnNext.click(function(){
+			_pos = _posLeft;
+			_nowIndex = 3;
+			slideAni();
+		});
+		$btnPrev.click(function(){
+			_pos = _posRight;
+			_nowIndex = 1;
+			slideAni();
+		});
+	</script>
+</body>
+</html>
