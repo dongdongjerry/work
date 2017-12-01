@@ -27,10 +27,10 @@
         sup{vertical-align:text-top}
         sub{vertical-align:text-bottom}
         input,textarea,select{*font-size:100%}
-        a {text-decoration: none;outline: none;}
+        a {text-decoration: none;outline: none;cursor: pointer}
         a:-webkit-any-link {cursor: auto;text-decoration: none;}
 
-        .cy-swiper{
+        .bg3 .cy-swiper{
             width: 880px;
             height: 534px;
             padding-top: 30px;
@@ -38,74 +38,141 @@
             margin: 0 auto;
             top:50px;
         }
-        .cy-swiper .swiper-slide {
+        .bg3 .cy-swiper .swiper-slide {
             text-align: center;
             opacity: 1;
             margin-left: -2px;
             width: 0;
             height: 0;
         }
-        .swiper-slide>img{
+        .bg3 .swiper-slide>img{
             width: 0;
             height: 0;
         }
-        .cy-swiper .swiper-slide-visible {
+        .bg3 .cy-swiper .swiper-slide-visible {
             text-align: center;
             width: 285px;
             position: relative;
             margin: 0 auto;
             opacity: .6;
+            filter:alpha(opacity=60);
         }
-        .swiper-slide-visible>img{
+        .bg3 .swiper-slide-visible>img{
             width: 285px;
             height: 434px;
         }
-        .cy-swiper  .swiper-slide-active {
+        .bg3 .cy-swiper  .swiper-slide-active {
             position: relative;
             margin: 0 auto;
             z-index: 22;
             top: 0;
             right: 10px;
             opacity: 1;
+            filter:alpha(opacity=100);
         }
-        .swiper-slide-active>img{
+        .bg3 .swiper-slide-active>img{
             width: 328px;
             height: 482px;
             position: absolute;
             left: -7px;
             top: -25px;
         }
+
+
+        .bg4 .swiper-slide{
+            width: 309px !important;
+            height: 433px !important;
+            background: url("ossweb-img/bg-border.png") center center no-repeat;
+            margin-right: 36px;
+            position: relative;
+            line-height: 433px;
+            padding-top: 10px;
+        }
+        .bg4 .swiper-container{
+            width: 1035px;
+            height: 500px;
+            color: #fff;
+            text-align: center;
+        }
+        .cover{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: #303838;
+            top: 0;
+            opacity: 0;
+            filter:alpha(opacity=0);
+        }
+        .cover a{
+            width: 49px;
+            height: 49px;
+            background: url("ossweb-img/sprit.png");
+            display: block;
+            margin: 0 auto;
+            margin-top: 192px;
+            /*position: absolute;
+            top: 192px;
+            left: 134px;*/
+            cursor: pointer;
+            background-position: -18px 91px;
+        }
+        .cover:hover{
+            opacity: .7;
+            filter:alpha(opacity=70);
+        }
+        .introduction{
+            display: none;
+        }
+        .player-name{
+            width: 100%;
+            height: 22px;
+            position: absolute;
+            bottom: -40px;
+            font-size: 16px;
+            color: #e8bdd6;
+            line-height: 22px;
+            text-align: center;
+            text-overflow:ellipsis;
+            overflow:hidden;
+            white-space:nowrap;
+        }
     </style>
 </head>
 <body>
-<div class="bg1-1">
+<div class="bg1-1" id="top">
     <div class="content">
         <h1><a class="logo"><img src="ossweb-img/logo.png" width="186" height="71"></a></h1>
     </div>
 </div>
+<!--将头部背景分割成两部分-->
 <div class="bg1-2"></div>
+
+<!--------配件------->
 <div class="bg2">
     <div class="content">
         <h2 class="tit-1">可选搭配部件</h2>
         <span class="small-tit">
             注：投稿作品至少需包含一个可选部件
         </span>
-        <div class="part-item-1">
-            <a href="#">查看详情</a>
+        <div class="part-item part-item-1">
+            <a href="javascript:void(0)">查看详情</a>
         </div>
-        <div class="part-item-2">
-            <a href="#">查看详情</a>
+        <div class="part-item part-item-2">
+            <a href="javascript:void(0)">查看详情</a>
         </div>
-        <div class="part-item-3">
-            <a href="#">查看详情</a>
+        <div class="part-item part-item-3">
+            <a href="javascript:void(0)">查看详情</a>
         </div>
     </div>
 </div>
+
+<!-------搭配示例------>
 <div class="bg3">
     <div class="content">
         <h2 class="tit-1">搭配示例</h2>
         <a href="#" class="swiper1-arrow-left"></a>
         <a href="#" class="swiper1-arrow-right"></a>
+        <!----------轮播图------------->
         <div class="swiper-container cy-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="ossweb-img/img-banner1-01.png" width="328" height="482"></div>
@@ -115,14 +182,76 @@
                 <div class="swiper-slide"><img src="ossweb-img/img-banner1-01.png" width="328" height="482"></div>
             </div>
         </div>
-
     </div>
 </div>
+<!-------玩家搭配展示------------->
 <div class="bg4">
     <div class="content">
         <h2 class="tit-1">玩家搭配展示</h2>
+        <!------img放大图------->
+        <!--作品介绍放进 introduction -->
+        <a href="#" class="swiper2-arrow-left"></a>
+        <a href="#" class="swiper2-arrow-right"></a>
+        <div class="swiper-container swiper2">
+            <div class="swiper-wrapper swiper2">
+                <div class="swiper-slide">
+                    <img src="ossweb-img/img-banner2-01.png" width="291" height="423">
+                    <p class="player-name">玩家名称玩家名</p>
+                    <p class="introduction">配件介绍配件介绍配件介绍配件介绍配件介绍配件
+                        介绍配件介绍配件介绍配件~</p>
+                    <div class="cover">
+                        <a href="javascript:void(0)"></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="ossweb-img/img-banner2-02.png" width="291" height="423">
+                    <p class="player-name">玩家名称玩家名</p>
+                    <div class="cover">
+                        <a href="javascript:void(0)"></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="ossweb-img/img-banner2-03.png" width="291" height="423">
+                    <p class="player-name">玩家名称玩家名</p>
+                    <p class="introduction">配件介绍配件介绍配件介绍配件介绍配件介绍配件
+                        介绍配件介绍配件介绍配件~</p>
+                    <div class="cover">
+                        <a href="javascript:void(0)"></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="ossweb-img/img-banner2-01.png" width="291" height="423">
+                    <p class="player-name">玩家名称玩家名玩家名称玩家名玩家名称玩家名玩家名称玩家名</p>
+                    <p class="introduction">配件介绍配件介绍配件介绍配件介绍配件介绍配件
+                        介绍配件介绍配件介绍配件~</p>
+                    <div class="cover">
+                        <a href="javascript:void(0)"></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="ossweb-img/img-banner2-02.png" width="291" height="423">
+                    <p class="player-name">玩家名称玩家名</p>
+                    <p class="introduction">配件介绍配件介绍配件介绍配件介绍配件介绍配件
+                        介绍配件介绍配件介绍配件~</p>
+                    <div class="cover">
+                        <a href="javascript:void(0)"></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="ossweb-img/img-banner2-03.png" width="291" height="423">
+                    <p class="player-name">玩家名称玩家名</p>
+                    <p class="introduction">配件介绍配件介绍配件介绍配件介绍配件介绍配件
+                        介绍配件介绍配件介绍配件~</p>
+                    <div class="cover">
+                        <a href="javascript:void(0)"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
+<!---------活动说明-------->
 <div class="bg5">
     <div class="content">
         <h2 class="tit-4"><i></i>活动说明</h2>
@@ -138,25 +267,116 @@
         <p>相同搭配将以时间顺序为准，先投稿者优先上传；请暖粉们文明发图及评论，勿涉及违法事项，谢谢大家对暖暖的支持和配合！</p>
     </div>
 </div>
-<div class="slide-tip"></div>
+
+<!------右侧提示-------->
+<div class="slide-tip">
+    <h4>【小提示】</h4>
+    <p>参与投票可打开游戏(首页-好友-展开-暖暖社区-私人衣橱)</p>
+    <a href="#"></a>
+</div>
+
+<!-------弹出层---------->
+<div class="popup-comp">
+    <!-------遮罩-------->
+    <div class="popup-wrap"></div>
+    <!--部件-->
+    <div class="part-detail part-detail-1">
+        <h4>瑞雪团子</h4>
+        <h5>获得方式</h5>
+        <p>配件瑞雪团子是 【设计图制作】 即可得到~</p>
+        <a href="javascript:void(0)" class="btn-close"></a>
+    </div>
+    <div class="part-detail part-detail-2">
+        <h4>月球浦</h4>
+        <h5>获得方式</h5>
+        <p>配件月球浦是 【设计图制作】 即可得到~</p>
+        <a href="javascript:void(0)" class="btn-close"></a>
+    </div>
+    <div class="part-detail part-detail-3">
+        <h4>加绒板鞋</h4>
+        <h5>获得方式</h5>
+        <p>配件加绒板鞋是 【设计图制作】 即可得到~</p>
+        <a href="javascript:void(0)" class="btn-close"></a>
+    </div>
+
+    <!----玩家搭配---->
+    <div class="player-opus">
+        <img src="ossweb-img/test-player.png" width="399" height="502">
+        <h4>玩家名称</h4>
+        <p>作品介绍</p>
+        <span>作品介绍作品介绍作品介绍介绍作品介绍作品介绍作品介绍作品介绍作品介绍作品介绍作品介绍</span>
+        <a class="btn-close"></a>
+    </div>
+</div>
 <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
 <script src="ossweb-img/idangerous.swiper.min.js"></script>
 <script>
-    var mySwiper3 = new Swiper('.cy-swiper',{
+$(document).ready(function () {
+    /*查看部件*/
+    $(".part-item a").each(function (index) {
+       $(this).on('click',function () {
+           $(".popup-comp").addClass("show");
+           $(".part-detail").eq(index).addClass("show")
+       })
+    });
+    $(".cover a").each(function (index) {
+       $(this).on('click',function () {
+           var playerName = "",
+               introduction = "",
+               imgsrc = "";
+           playerName = $(this).parents(".cover").siblings(".player-name").text();
+           introduction = $(this).parents(".cover").siblings(".introduction").text()||"无";
+           imgsrc = $(this).parents(".cover").siblings("img").attr("src");
+           console.log(playerName+"||"+introduction+"||"+ imgsrc);
+           $(".player-opus img").attr("src",imgsrc);
+           $(".player-opus h4").html(playerName);
+           $(".player-opus span").html(introduction);
+
+           $(".popup-comp").addClass("show");
+           $(".player-opus").addClass("show");
+       })
+    });
+
+    /*关闭弹窗按钮*/
+    $(".btn-close").on('click',function () {
+        $(".popup-comp").removeClass("show");
+        $(".part-detail").removeClass("show");
+    })
+})
+
+
+</script>
+<script>
+    var mySwiper1 = new Swiper('.cy-swiper',{
         centeredSlides: true,
         slidesPerView: 3,
         loop:true,
         speed:500,
         mousewheelControl:false
         /*   autoplay:3000*/
-    })
-    $('.swiper1-arrow-left').on('click', function(e){
+    });
+    $('.bg3 .swiper1-arrow-left').on('click', function(e){
         e.preventDefault();
-        mySwiper3.swipePrev()
-    })
-    $('.swiper1-arrow-right').on('click', function(e){
+        mySwiper1.swipePrev()
+    });
+    $('.bg3 .swiper1-arrow-right').on('click', function(e){
         e.preventDefault();
-        mySwiper3.swipeNext()
+        mySwiper1.swipeNext()
+    });
+
+    var mySwiper2 = new Swiper('.bg4 .swiper-container',{
+        /*pagination: '.pagination',
+        paginationClickable: true,*/
+        loop:true,
+        slidesPerView: 3
+    });
+    $('.bg4 .swiper2-arrow-left').on('click', function(e){
+        e.preventDefault();
+        mySwiper2.swipePrev()
+    })
+    $('.bg4 .swiper2-arrow-right').on('click', function(e){
+        e.preventDefault();
+        mySwiper2.swipeNext()
     });
 </script>
 </body>

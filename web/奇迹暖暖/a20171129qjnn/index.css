@@ -62,41 +62,49 @@ body {
   color: #9a89c9;
   padding-right: 60px;
 }
-.part-item-1,
-.part-item-2,
-.part-item-3 {
+.part-item {
   width: 310px;
   height: 428px;
   margin-top: 21px;
   float: left;
   text-align: center;
+  position: relative;
 }
-.part-item-1 a,
-.part-item-2 a,
-.part-item-3 a {
+.part-item a {
   display: block;
   width: 175px;
   height: 44px;
   margin: 0 auto;
-  margin-top: 305px;
+  margin-top: 302px;
   background: url("ossweb-img/bg-tit-04.png") center center no-repeat;
   font-size: 18px;
   text-align: center;
-  color: #a28cd5;
+  color: #9a5a01;
   line-height: 44px;
   cursor: pointer;
 }
 .part-item-1 {
-  background: url("ossweb-img/img-comp-1.png") center center no-repeat;
+  background: url("ossweb-img/img-comp-1.png") center no-repeat;
 }
 .part-item-2 {
   margin-left: 35px;
   margin-right: 35px;
-  background: url("ossweb-img/img-comp-2.png") center center no-repeat;
+  background: url("ossweb-img/img-comp-2.png") center no-repeat;
 }
 .part-item-3 {
-  background: url("ossweb-img/img-comp-3.png") center center no-repeat;
+  background: url("ossweb-img/img-comp-3.png") center no-repeat;
 }
+/*.part-item-1 img
+    top: 71px;
+    left: 37px;
+.part-item-2
+
+  img
+    top: 85px;
+    left: 52px;
+.part-item-3 img
+  top: 91px;
+  left: 60px;*/
 .bg3 {
   width: 100%;
   height: 666px;
@@ -127,6 +135,33 @@ body {
   width: 100%;
   height: 652px;
   background: url("ossweb-img/bg_04.jpg") center center no-repeat;
+}
+.bg4 .tit-1 {
+  margin-top: 64px;
+  margin-bottom: 34px;
+}
+.bg4 .content {
+  padding: 0 41px;
+  position: relative;
+}
+.swiper2-arrow-left,
+.swiper2-arrow-right {
+  display: block;
+  position: absolute;
+  top: 400px;
+  width: 26px;
+  height: 35px;
+  z-index: 10;
+}
+.swiper2-arrow-left {
+  left: 0;
+  background: url("ossweb-img/sprit.png");
+  background-position: 0 -60px;
+}
+.swiper2-arrow-right {
+  right: 0;
+  background: url("ossweb-img/sprit.png");
+  background-position: -54px -60px;
 }
 /*---------bg5-----------*/
 .bg5 {
@@ -166,4 +201,152 @@ body {
   width: 100%;
   font-size: 14px;
   color: #e4b3d5;
+}
+/*------侧边提示-------*/
+.slide-tip {
+  width: 113px;
+  height: 266px;
+  position: fixed;
+  right: 5%;
+  top: 30%;
+  background: url("ossweb-img/bg-sidebar.png") top center no-repeat;
+  text-align: center;
+}
+.slide-tip h4 {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 108px;
+  margin-bottom: 18px;
+}
+.slide-tip p {
+  font-size: 14px;
+  color: #c4abd7;
+  width: 101px;
+  margin-left: 7px;
+  text-align: left;
+/*text-align left*/
+  margin-bottom: 11px;
+}
+.slide-tip a {
+  display: block;
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  left: 43px;
+  bottom: 0;
+/*margin-top 11px*/
+  background: url("ossweb-img/sprit.png");
+  background-position: -52px -163px;
+}
+/*---------配件弹出层--------*/
+.popup-comp {
+  width: 100%;
+  height: 3426px;
+  top: 0;
+  z-index: 15;
+  position: absolute;
+  display: none;
+}
+.popup-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #1d1a30;
+  opacity: 0.6;
+}
+.part-detail {
+  width: 433px;
+  height: 522px;
+  margin: 0 auto;
+  margin-top: 44%;
+  padding-top: 1px;
+  text-align: center;
+  position: relative;
+  z-index: 16;
+  display: none;
+}
+.part-detail h4 {
+  width: 198px;
+  height: 47px;
+  margin: 0 auto;
+  margin-top: 265px;
+  margin-bottom: 54px;
+  background: url("ossweb-img/bg-tit-06.png") center no-repeat;
+  font-size: 18px;
+  color: #88798e;
+  line-height: 47px;
+}
+.part-detail h5 {
+  font-size: 16px;
+  color: #8d7498;
+  margin-bottom: 5px;
+}
+.part-detail p {
+  font-size: 14px;
+  color: #978ea8;
+}
+.part-detail img {
+  position: absolute;
+}
+.popup-comp .part-detail-1 {
+  background: url("ossweb-img/bg-part.png") center no-repeat;
+}
+.popup-comp .part-detail-2 {
+  background: url("ossweb-img/bg-part3.png") center no-repeat;
+}
+.popup-comp .part-detail-3 {
+  background: url("ossweb-img/bg-part3.png") center no-repeat;
+}
+.player-opus {
+  width: 473px;
+  height: 707px;
+  margin: 0 auto;
+  margin-top: 117%;
+  padding-top: 1px;
+  background: url("ossweb-img/bg-player-opus.png") center no-repeat;
+  position: relative;
+  z-index: 16;
+  text-align: center;
+  display: none;
+}
+.player-opus img {
+  width: 399px;
+  height: 502px;
+  margin-top: 25px;
+}
+.player-opus h4 {
+  width: 195px;
+  height: 44px;
+  position: absolute;
+  left: 139px;
+  top: 505px;
+  background: url("ossweb-img/bg-tit-07.png") center no-repeat;
+  font-size: 18px;
+  color: #fff;
+  line-height: 44px;
+}
+.player-opus p {
+  margin-top: 35px;
+  font-size: 16px;
+  color: #8d7498;
+}
+.player-opus span {
+  display: block;
+  width: 316px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #978ea8;
+}
+.btn-close {
+  width: 41px;
+  height: 41px;
+  background: url("ossweb-img/btn-close.png") center no-repeat;
+  position: absolute;
+  top: 0;
+  right: -53px;
+}
+.show,
+.popup-comp>.show {
+  display: block;
 }
