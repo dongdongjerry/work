@@ -32,16 +32,28 @@ body {
   height: 101px;
   background: url("ossweb-img/bg-tit-03.png") center center no-repeat;
 }
-/*----bg1------------*/
-.bg1-1 {
+.panel {
   width: 100%;
-  height: 476px;
-  background: url("ossweb-img/bg_01-1.jpg") center center no-repeat;
+}
+.slogan {
+  display: none;
+}
+.clearFloat {
+  overflow: hidden;
+}
+/*----bg1------------*/
+.panel-1 {
+  height: 893px;
+  background: url("ossweb-img/bg1.jpg") center center no-repeat;
 }
 .logo {
-  display: block;
+  float: right;
   margin-top: 23px;
-  margin-left: 607px;
+  margin-right: 200px;
+}
+.content-1 {
+  height: 893px;
+  background: url("ossweb-img/bg-content.jpg") center no-repeat;
 }
 /*分割图片*/
 .bg1-2 {
@@ -50,67 +62,56 @@ body {
   background: url("ossweb-img/bg_01-2.jpg") center center no-repeat;
 }
 /*---------bg2-----------*/
-.bg2 {
-  width: 100%;
+.panel-2 {
   height: 615px;
   background: url("ossweb-img/bg_02.jpg") center center no-repeat;
   text-align: center;
 }
-.bg2 span {
-  display: block;
+.small-tit {
   font-size: 14px;
   color: #9a89c9;
   padding-right: 60px;
 }
 .part-item {
+  float: left;
+  position: relative;
+  margin-top: 21px;
   width: 310px;
   height: 428px;
-  margin-top: 21px;
-  float: left;
   text-align: center;
-  position: relative;
+  background: url("ossweb-img/bg-comp.png") center no-repeat;
 }
-.part-item a {
+.part-item-tit {
+  margin: 18px 0 18px;
+  font-size: 24px;
+  color: #a28cd5;
+}
+.part-item-btn {
   display: block;
+  position: absolute;
+  top: 305px;
+  left: 68px;
   width: 175px;
   height: 44px;
-  margin: 0 auto;
-  margin-top: 302px;
-  background: url("ossweb-img/bg-tit-04.png") center center no-repeat;
   font-size: 18px;
   text-align: center;
   color: #9a5a01;
   line-height: 44px;
   cursor: pointer;
-}
-.part-item-1 {
-  background: url("ossweb-img/img-comp-1.png") center no-repeat;
+  background: url("ossweb-img/bg-tit-04.png") center center no-repeat;
 }
 .part-item-2 {
   margin-left: 35px;
   margin-right: 35px;
-  background: url("ossweb-img/img-comp-2.png") center no-repeat;
 }
-.part-item-3 {
-  background: url("ossweb-img/img-comp-3.png") center no-repeat;
+.get-way {
+  display: none;
 }
-/*.part-item-1 img
-    top: 71px;
-    left: 37px;
-.part-item-2
-
-  img
-    top: 85px;
-    left: 52px;
-.part-item-3 img
-  top: 91px;
-  left: 60px;*/
-.bg3 {
-  width: 100%;
+.panel-3 {
   height: 666px;
   background: url("ossweb-img/bg_03.jpg") center center no-repeat;
 }
-.bg3 .content {
+.panel-3 .content {
   position: relative;
 }
 .swiper1-arrow-left,
@@ -131,16 +132,15 @@ body {
   background: url("ossweb-img/sprit.png");
   background-position: -51px 0;
 }
-.bg4 {
-  width: 100%;
-  height: 652px;
+.panel-4 {
+  height: 701px;
   background: url("ossweb-img/bg_04.jpg") center center no-repeat;
 }
-.bg4 .tit-1 {
+.panel-4 .tit-1 {
   margin-top: 64px;
   margin-bottom: 34px;
 }
-.bg4 .content {
+.panel-4 .content {
   padding: 0 41px;
   position: relative;
 }
@@ -164,29 +164,31 @@ body {
   background-position: -54px -60px;
 }
 /*---------bg5-----------*/
-.bg5 {
+.panel-5 {
   width: 100%;
-  height: 600px;
+  height: 551px;
   background: url("ossweb-img/bg_05.jpg") center center no-repeat;
 }
-.bg5 .tit-4 {
-  height: 27px;
+.panel-5 p {
+  width: 100%;
+  font-size: 14px;
+  color: #e4b3d5;
+}
+.tit-4 {
   font-size: 30px;
-  line-height: 27px;
-  margin-top: 80px;
+  margin-top: 29px;
   color: #efc58e;
 }
-.bg5 .tit-4 i {
+.tit-4 i {
   display: block;
   float: left;
   width: 7px;
   height: 27px;
-  margin-right: 10px;
-  margin-top: 1px;
+  margin: 8px 10px 0 0;
   background: url("ossweb-img/sprit.png");
   background-position: -9px -167px;
 }
-.bg5 .tit-5 {
+.tit-5 {
   width: 118px;
   height: 43px;
   margin-top: 24px;
@@ -197,11 +199,6 @@ body {
   text-align: center;
   line-height: 43px;
 }
-.bg5 p {
-  width: 100%;
-  font-size: 14px;
-  color: #e4b3d5;
-}
 /*------侧边提示-------*/
 .slide-tip {
   width: 113px;
@@ -211,6 +208,8 @@ body {
   top: 30%;
   background: url("ossweb-img/bg-sidebar.png") top center no-repeat;
   text-align: center;
+  display: none;
+  z-index: 15;
 }
 .slide-tip h4 {
   font-size: 14px;
@@ -254,24 +253,32 @@ body {
   top: 0;
   background: #1d1a30;
   opacity: 0.6;
+  filter: alpha(opacity=60);
 }
 .part-detail {
   width: 433px;
   height: 522px;
   margin: 0 auto;
-  margin-top: 44%;
+  margin-top: 970px;
   padding-top: 1px;
   text-align: center;
   position: relative;
   z-index: 16;
   display: none;
+  background: url("ossweb-img/bg-part.png") center no-repeat;
+}
+.part-detail img {
+  position: absolute;
+  top: 9px;
+  left: 0;
 }
 .part-detail h4 {
+  position: absolute;
+  top: 265px;
+  left: 118px;
   width: 198px;
   height: 47px;
   margin: 0 auto;
-  margin-top: 265px;
-  margin-bottom: 54px;
   background: url("ossweb-img/bg-tit-06.png") center no-repeat;
   font-size: 18px;
   color: #88798e;
@@ -280,29 +287,17 @@ body {
 .part-detail h5 {
   font-size: 16px;
   color: #8d7498;
-  margin-bottom: 5px;
+  margin-top: 366px;
 }
 .part-detail p {
   font-size: 14px;
   color: #978ea8;
 }
-.part-detail img {
-  position: absolute;
-}
-.popup-comp .part-detail-1 {
-  background: url("ossweb-img/bg-part.png") center no-repeat;
-}
-.popup-comp .part-detail-2 {
-  background: url("ossweb-img/bg-part3.png") center no-repeat;
-}
-.popup-comp .part-detail-3 {
-  background: url("ossweb-img/bg-part3.png") center no-repeat;
-}
 .player-opus {
   width: 473px;
   height: 707px;
   margin: 0 auto;
-  margin-top: 117%;
+  margin-top: 2180px;
   padding-top: 1px;
   background: url("ossweb-img/bg-player-opus.png") center no-repeat;
   position: relative;
@@ -316,8 +311,9 @@ body {
   margin-top: 25px;
 }
 .player-opus h4 {
-  width: 195px;
+  width: 175px;
   height: 44px;
+  padding: 0 10px;
   position: absolute;
   left: 139px;
   top: 505px;
@@ -325,6 +321,9 @@ body {
   font-size: 18px;
   color: #fff;
   line-height: 44px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .player-opus p {
   margin-top: 35px;
