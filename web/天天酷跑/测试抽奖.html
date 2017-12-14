@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .lottery {position: relative;width: 1003px;height: 645px;margin-top: 20px;margin-left: 20px;}
+        /*.lottery {position: relative;width: 800px;height: 360px;margin-top: 20px;margin-left: 20px;}*/
+    </style>
+</head>
+<body>
+<div class="lottery" id="lotterycontent">
+    <img src="img/img.png" alt='奖品' width="1003" height="645">
+    <!--<img src="http://ossweb-img.qq.com/images/js/delottery/lotterybg.jpg" alt='奖品' width="800" height="360">-->
+</div>
+<script src="http://game.gtimg.cn/images/js/delottery/lottery.js"></script>
+<script>
+    //点击开始抽奖 通知js flash->js
+
+    //开始抽奖lottery->js
+    function callJsToStart() {
+        lottery.disable();
+        calllotteryToRoll(10);
+    }
+    //开发获得抽奖结果 通知lottery开始播放效果 js->lottery
+    function calllotteryToRoll(id) {
+        if (lottery) lottery.stopRoll(id);
+    }
+    //动画完成通知js lottery->js
+    function callJsToComplete() {
+        alert('恭喜你获得大奖哟！！');
+    }
+
+    //初始化抽奖的 可以不知道内部
+    var lottery = new Lottery({
+        'lighturl': 'http://ossweb-img.qq.com/images/js/delottery/sel.png',//外部光圈png 不填写就用默认的效果
+        'starturl': 'http://ossweb-img.qq.com/images/js/delottery/blankstartbtn.png', //外部按钮png 不填写就用默认的按钮效果
+        'width': 1003,//lottery 宽度
+        'height': 645,//lottery 高度
+        'total': 15,//抽奖产品的总数
+        'sbtnx': 343,// 开始抽奖按钮的位置x坐标
+        'sbtny': 526,// 开始抽奖按钮的位置y坐标
+        'sbtnw': 321,// 开始抽奖按钮的宽度
+        'sbtnh': 110,// 开始抽奖按钮的高度
+        'boxw': 180,// 奖品光效的宽度
+        'boxh': 146,//奖品光效的高度
+        'position': "0_0,208_0,413_0,616_0,823_0,0_146,208_146,413_146,616_146,823_146,0_314,208_314,413_314,616_314,823_314",
+        //奖品光效的位置，对应奖品图片的布局，填入每个奖品的位置以及角度用逗号分割 x_y 例如19_20或者19_20_0 表示第一个奖品的位置 x坐标为19px y坐标为20px 角度为0。）
+        'contentId': 'lotterycontent',//嵌入lottery 的div层的 id
+        'onClickRollEvent': callJsToStart,//对应上面接口
+        'onCompleteRollEvent': callJsToComplete //对应上面接口
+    });
+</script>
+</body>
+</html>
